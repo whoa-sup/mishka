@@ -4,9 +4,19 @@
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "browser-sync": "^2.26.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
+  "browserslist": [
+    "last 2 version",
+    "not dead",
+    "not ie <= 11"
+  ],
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
