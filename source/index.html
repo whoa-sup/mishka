@@ -11,12 +11,12 @@
     <header class="header">
       <!-- logo -->
       <a class="header__logo logo">
-        <img class="logo__image" src="img/logo.img" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
+        <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
       </a>
       <!-- menu -->
       <nav class="header__menu menu">
-        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list">
-          <svg class="menu__icon" width="30" height="30"></svg>
+        <button class="menu__button burger" type="button" aria-expanded="false" aria-controls="menu__list">
+          <svg class="burger__icon" width="30" height="30"></svg>
         </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
@@ -26,10 +26,29 @@
             <a href="form.html" class="menu__link">Вязание на заказ</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--search">Поиск по сайту</a>
+            <a href="#" class="menu__link menu__link--search">
+              <svg class="menu__icon" width="18" height="18">
+                <!-- use -->
+              </svg>
+              Поиск по сайту
+            </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--cart">Корзина: пока пуста</a>
+            <a href="#" class="menu__link menu__link--cart">
+              <svg class="menu__icon" width="18" height="18">
+                <!-- use -->
+              </svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+          <li class="menu__item menu__item--large">
+            <a href="#" class="menu__link">Новые поступления</a>
+          </li>
+          <li class="menu__item menu__item--large">
+            <a href="#" class="menu__link">Распродажа</a>
+          </li>
+          <li class="menu__item menu__item--medium">
+            <p>Бесплатная доставка по России</p>
           </li>
         </ul>
       </nav>

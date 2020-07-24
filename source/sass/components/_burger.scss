@@ -1,0 +1,22 @@
+.burger {
+  display: block;
+  padding: 0;
+
+  @include size(32px, 32px);
+
+  background-color: red;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+  }
+
+  @media (min-width: $medium) {
+    display: none;
+  }
+}
+
+.burger__icon {
+  display: block;
+}

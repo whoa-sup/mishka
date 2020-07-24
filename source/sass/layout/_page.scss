@@ -3,7 +3,19 @@
 }
 
 .page__body {
-  margin: 0;
   display: grid;
+  margin: 0;
+  min-width: $small;
+
   grid-template-rows: min-content 1fr min-content;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

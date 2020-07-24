@@ -1,0 +1,76 @@
+// menu
+
+.menu {
+  display: grid;
+}
+
+// button
+
+.menu__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+// list
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// item
+
+.menu__item {
+  padding: 28px;
+  padding-left: 76px;
+  box-shadow: 0 1px 0 var(--shadow-grey), inset 0 1px 0 var(--shadow-grey);
+}
+
+.menu__item--large {
+  display: none;
+
+  @media (min-width: $large) {
+    display: block;
+  }
+}
+
+.menu__item--medium {
+  display: none;
+
+  @media (min-width: $medium) {
+    display: block;
+  }
+}
+
+// link
+
+.menu__link {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// icon
+
+.menu__icon {
+  position: absolute;
+  left: 30px;
+  background-color: red;
+}
+

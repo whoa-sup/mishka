@@ -1,0 +1,16 @@
+// logo
+.logo {
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 1px 0 var(--shadow-grey), inset 0 1px 0 var(--shadow-grey);
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
