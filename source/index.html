@@ -16,7 +16,10 @@
       <!-- menu -->
       <nav class="header__menu menu">
         <button class="menu__button burger" type="button" aria-expanded="false" aria-controls="menu__list">
-          <svg class="burger__icon" width="30" height="30"></svg>
+          <svg class="burger__icon" width="30" height="30">
+            <use class="burger__open" href="img/sprite.svg#icon-menu-open"></use>
+            <use class="burger__close" href="img/sprite.svg#icon-menu-close"></use>
+          </svg>
         </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
@@ -28,7 +31,7 @@
           <li class="menu__item">
             <a href="#" class="menu__link menu__link--search">
               <svg class="menu__icon" width="18" height="18">
-                <!-- use -->
+                <use href="img/sprite.svg#icon-search"></use>
               </svg>
               Поиск по сайту
             </a>
@@ -36,7 +39,7 @@
           <li class="menu__item">
             <a href="#" class="menu__link menu__link--cart">
               <svg class="menu__icon" width="18" height="18">
-                <!-- use -->
+                <use href="img/sprite.svg#icon-cart"></use>
               </svg>
               Корзина: пока пуста
             </a>
