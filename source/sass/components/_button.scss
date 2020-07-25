@@ -1,0 +1,24 @@
+// button
+
+.button {
+  display: block;
+  padding: 16px;
+
+  text-align: center;
+  color: var(--special-black);
+  text-transform: uppercase;
+
+  background-color: var(--basic-white);
+  border: 2px solid var(--special-black);
+
+  &:hover,
+  &:focus {
+    color: var(--basic-white);
+
+    background-color: var(--special-black);
+  }
+
+  &:active .button__text {
+    opacity: 0.3;
+  }
+}
