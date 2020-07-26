@@ -66,7 +66,7 @@
             <a class="promo__link" href="#">
               Предметы интерьера
               <svg class="promo__icon" width="60" height="60">
-                <!-- use -->
+                <use href="img/sprite.svg#icon-interior"></use>
               </svg>
             </a>
           </li>
@@ -74,7 +74,7 @@
             <a class="promo__link promo__link--dark" href="#">
               Детские игрушки
               <svg class="promo__icon" width="60" height="60">
-                <!-- use -->
+                <use href="img/sprite.svg#icon-toy"></use>
               </svg>
             </a>
           </li>
@@ -112,27 +112,39 @@
         <h2 class="about__title">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item">
-            <!-- тут возможно будет картинка карточки -->
+            <svg class="about__icon" width="32" height="37">
+              <use href="img/sprite.svg#icon-feature-flower"></use>
+            </svg>
             <p class="about__tagline">Экологически чистые материалы</p>
           </li>
           <li class="about__item">
-            <!-- тут возможно будет картинка карточки -->
+            <svg class="about__icon" width="47" height="27">
+              <use href="img/sprite.svg#icon-feature-money"></use>
+            </svg>
             <p class="about__tagline">Скандинавский стиль по российской цене</p>
           </li>
           <li class="about__item">
-            <!-- тут возможно будет картинка карточки -->
+            <svg class="about__icon" width="34" height="27">
+              <use href="img/sprite.svg#icon-feature-heart"></use>
+            </svg>
             <p class="about__tagline">Увеличивает лайкина фотографиях</p>
           </li>
           <li class="about__item">
-            <!-- тут возможно будет картинка карточки -->
+            <svg class="about__icon" width="35" height="34">
+              <use href="img/sprite.svg#icon-feature-ball"></use>
+            </svg>
             <p class="about__tagline">Связано вручную с любовью и умилением</p>
           </li>
           <li class="about__item">
-            <!-- тут возможно будет картинка карточки -->
+            <svg class="about__icon" width="55" height="23">
+              <use href="img/sprite.svg#icon-feature-rocket"></use>
+            </svg>
             <p class="about__tagline">Поддержка отечественного производителя</p>
           </li>
           <li class="about__item">
-            <!-- тут возможно будет картинка карточки -->
+            <svg class="about__icon" width="33" height="32">
+              <use href="img/sprite.svg#icon-feature-gift"></use>
+            </svg>
             <p class="about__tagline">Поставляется в подарочной упаковке</p>
           </li>
         </ul>
@@ -150,10 +162,20 @@
             </li>
           </ul>
           <div class="reviews__controls">
-            <button class="reviews__button reviews__button--prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-            <button class="reviews__button reviews__button--next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+            <button class="reviews__button arrow-button" type="button">
+              <svg class="arrow-button__icon" width="50" height="26">
+                <use href="img/sprite.svg#icon-left-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Предыдущий отзыв</span>
+            </button>
+            <button class="reviews__button arrow-button" type="button">
+              <svg class="arrow-button__icon" width="50" height="26">
+                <use href="img/sprite.svg#icon-right-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Следующий отзыв</span>
+            </button>
           </div>
-          <a class="reviews__button button" href="add-review.html" target="_blank">Написать</a>
+          <a class="button reviews__button" href="add-review.html" target="_blank">Написать</a>
         </div>
       </section>
       <!-- contacts -->
@@ -179,24 +201,24 @@
       <ul class="footer__socials socials">
         <li class="socials__item">
           <a href="#" class="socials__link" target="_blank">
-            <svg width="32" height="32">
-              <!-- social image -->
+            <svg width="22" height="21">
+              <use href="img/sprite.svg#icon-insta"></use>
             </svg>
             <span class="visually-hidden">Наша страничка в Instagram</span>
           </a>
         </li>
         <li class="socials__item">
           <a href="#" class="socials__link" target="_blank">
-            <svg width="32" height="32">
-              <!-- social image -->
+            <svg width="15" height="28">
+              <use href="img/sprite.svg#icon-fb"></use>
             </svg>
             <span class="visually-hidden">Наша страничка в Facebook</span>
           </a>
         </li>
         <li class="socials__item">
           <a href="#" class="socials__link" target="_blank">
-            <svg width="32" height="32">
-              <!-- social image -->
+            <svg width="23" height="20">
+              <use href="img/sprite.svg#icon-twitter"></use>
             </svg>
             <span class="visually-hidden">Наша страничка в Twitter</span>
           </a>
