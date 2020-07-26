@@ -7,6 +7,7 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const svgstore = require("gulp-svgstore");
 const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
 
 // Styles
 
