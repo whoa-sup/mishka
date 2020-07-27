@@ -1,0 +1,36 @@
+// review
+
+.review {
+  margin: 0;
+}
+
+// text
+
+.review__text {
+  margin-bottom: 35px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: var(--special-black);
+}
+
+// author
+
+.review__author {
+  margin-bottom: 30px;
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+// social
+
+.review__social {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+}

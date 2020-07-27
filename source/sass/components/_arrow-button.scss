@@ -1,0 +1,19 @@
+// arrow-button
+
+.arrow-button {
+  width: 50%;
+  margin: 0;
+  padding: 13px;
+
+  background-color: var(--basic-white);
+  border: 1px solid var(--shadow-grey);
+
+  &:hover .arrow-button__icon,
+  &:focus .arrow-button__icon {
+    opacity: 0.6;
+  }
+
+  &:active .arrow-button__icon {
+    opacity: 0.3;
+  }
+}
