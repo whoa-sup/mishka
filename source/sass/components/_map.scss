@@ -1,0 +1,29 @@
+// map
+
+.map {
+  position: relative;
+
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 42%;
+    left: 54%;
+
+    width: 21%;
+    height: 21%;
+
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+// image
+
+.map__image {
+  display: block;
+  width: 100%;
+}
