@@ -2,14 +2,18 @@
   display: block;
   padding: 0;
 
-  @include size(32px, 32px);
-
-  background-color: red;
+  background-color: transparent;
   border: none;
+
+  @include size(32px, 32px);
 
   &:hover,
   &:focus {
-    background-color: #fff;
+    fill: var(--special-green);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (min-width: $medium) {
@@ -19,4 +23,14 @@
 
 .burger__icon {
   display: block;
+}
+
+.burger__open,
+.menu__button--open .burger__close {
+  display: block;
+}
+
+.burger__close,
+.menu__button--open .burger__open {
+  display: none;
 }

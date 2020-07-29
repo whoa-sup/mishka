@@ -69,12 +69,22 @@
   &--dark {
     background-color: var(--basic-green-dark);
   }
+
+  &:hover .promo__icon,
+  &:focus .promo__icon {
+    opacity: 0.7;
+  }
+
+  &:active .promo__icon {
+    opacity: 0.3;
+  }
 }
 
 // icon
 
 .promo__icon {
-  background-color: red;
+  opacity: 0.5;
 
+  fill: #149080;
   justify-self: end;
 }

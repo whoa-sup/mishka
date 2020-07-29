@@ -61,7 +61,33 @@
 // email
 
 .contacts__email {
-  border-bottom: 1px solid #62d1ba;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #62d1ba;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--special-green);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background-color: var(--special-green);
+  }
+
+  &:active::after {
+    opacity: 0.1;
+  }
 }
 
 // map

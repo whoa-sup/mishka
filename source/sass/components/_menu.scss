@@ -10,6 +10,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+
   cursor: pointer;
 }
 
@@ -27,6 +28,7 @@
 .menu__item {
   padding: 28px;
   padding-left: 76px;
+
   box-shadow: 0 1px 0 var(--shadow-grey), inset 0 1px 0 var(--shadow-grey);
 }
 
@@ -49,6 +51,8 @@
 // link
 
 .menu__link {
+  position: relative;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
@@ -70,6 +74,8 @@
 
 .menu__icon {
   position: absolute;
-  left: 30px;
-  background-color: red;
+  top: 50%;
+  left: -45px;
+
+  transform: translateY(-50%);
 }
