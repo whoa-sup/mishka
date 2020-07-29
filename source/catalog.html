@@ -11,12 +11,15 @@
     <header class="header">
       <!-- logo -->
       <a class="header__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo.img" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
+        <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
       </a>
       <!-- menu -->
       <nav class="header__menu menu">
-        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list">
-          <svg class="menu__icon" width="30" height="30"></svg>
+        <button class="burger menu__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu__list">
+          <svg class="burger__icon" width="30" height="30">
+            <use class="burger__open" href="img/sprite.svg#icon-menu-open"></use>
+            <use class="burger__close" href="img/sprite.svg#icon-menu-close"></use>
+          </svg>
         </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
@@ -26,10 +29,29 @@
             <a href="form.html" class="menu__link">Вязание на заказ</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--search">Поиск по сайту</a>
+            <a href="#" class="menu__link menu__link--search">
+              <svg class="menu__icon" width="18" height="18">
+                <use href="img/sprite.svg#icon-search"></use>
+              </svg>
+              Поиск по сайту
+            </a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--cart">Корзина: пока пуста</a>
+            <a href="#" class="menu__link menu__link--cart">
+              <svg class="menu__icon" width="18" height="18">
+                <use href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              Корзина: пока пуста
+            </a>
+          </li>
+          <li class="menu__item menu__item--large">
+            <a href="#" class="menu__link">Новые поступления</a>
+          </li>
+          <li class="menu__item menu__item--large">
+            <a href="#" class="menu__link">Распродажа</a>
+          </li>
+          <li class="menu__item menu__item--medium">
+            <p>Бесплатная доставка по России</p>
           </li>
         </ul>
       </nav>
@@ -106,27 +128,27 @@
     <!-- Footer -->
     <footer class="footer">
       <!-- socials -->
-      <ul class="footer__socials socials">
+      <ul class="socials footer__socials">
         <li class="socials__item">
           <a href="#" class="socials__link" target="_blank">
-            <svg width="32" height="32">
-              <!-- social image -->
+            <svg class="socials__icon" width="22" height="21">
+              <use href="img/sprite.svg#icon-insta"></use>
             </svg>
             <span class="visually-hidden">Наша страничка в Instagram</span>
           </a>
         </li>
         <li class="socials__item">
           <a href="#" class="socials__link" target="_blank">
-            <svg width="32" height="32">
-              <!-- social image -->
+            <svg class="socials__icon" width="15" height="28">
+              <use href="img/sprite.svg#icon-fb"></use>
             </svg>
             <span class="visually-hidden">Наша страничка в Facebook</span>
           </a>
         </li>
         <li class="socials__item">
           <a href="#" class="socials__link" target="_blank">
-            <svg width="32" height="32">
-              <!-- social image -->
+            <svg class="socials__icon" width="23" height="20">
+              <use href="img/sprite.svg#icon-twitter"></use>
             </svg>
             <span class="visually-hidden">Наша страничка в Twitter</span>
           </a>
@@ -137,7 +159,9 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__title">Разработано</span>
           <span class="visually-hidden"> HTML Academy</span>
-          <img class="copyright__image" src="img/htmlacademy.svg" alt="" width="27" height="34">
+          <svg class="copyright__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+          </svg>
         </a>
       </div>
     </footer>
