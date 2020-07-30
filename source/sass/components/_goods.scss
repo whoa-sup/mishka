@@ -1,0 +1,38 @@
+// goods
+
+.goods {
+  padding: 30px;
+
+  color: var(--basic-black);
+
+  background-color: var(--basic-white);
+}
+
+// list
+
+.goods__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  grid-row-gap: 30px;
+
+  @media only screen and (min-width: $medium) {
+    grid-row-gap: 54px;
+  }
+
+  @media only screen and (min-width: $large) {
+    grid-column-gap: 52px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// item
+
+.goods__item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
