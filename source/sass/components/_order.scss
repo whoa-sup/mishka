@@ -1,0 +1,18 @@
+// order
+
+.order {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+// title
+
+.order__title {
+  margin: 0;
+  padding: 15px 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--special-black);
+}

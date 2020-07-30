@@ -1,0 +1,84 @@
+// radio
+
+.radio {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: var(--basic-black, #000000);
+
+  background-color: var(--basic-white, #ffffff);
+
+  @media only screen and (min-width: $medium) {
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
+
+// input
+
+.radio__input {
+  $innerSmall: 16px;
+  $radioSmall: 39px;
+  $innerBig: 21px;
+  $radioBig: 52px;
+
+  @include size($radioSmall);
+
+  @media only screen and (min-width: $medium) {
+    @include size($radioBig);
+  }
+
+  flex-shrink: 0;
+  margin-right: 23px;
+
+  border: 2px solid var(--special-black, #000000);
+  border-radius: 50%;
+
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
+
+  &:active {
+    border-color: var(--special-black);
+    opacity: 0.3;
+  }
+
+  &:checked + .radio__icon {
+    content: "";
+    position: absolute;
+    top: $radioSmall / 2;
+    left: $radioSmall / 2;
+
+    background-color: #62d1ba;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    @include size($innerSmall);
+
+    @media only screen and (min-width: $medium) {
+      @include size($innerBig);
+      top: $radioBig / 2;
+      left: $radioBig / 2;
+    }
+  }
+}
+
+// label
+
+.radio__label {
+  padding: 10px 0;
+
+  @media only screen and (min-width: $medium) {
+    padding: 16px 0;
+  }
+}

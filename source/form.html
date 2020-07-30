@@ -58,7 +58,10 @@
     </header>
     <!-- Main -->
     <main class="main">
-      <h1 class="main__title">Вязание на заказ</h1>
+      <!-- intro -->
+      <section class="intro">
+        <h1 class="intro__title">Вязание на заказ</h1>
+      </section>
       <!-- form -->
       <section class="main__order order">
         <h2 class="order__title">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</h2>
@@ -68,12 +71,12 @@
             <label class="form__item radio">
               <input class="radio__input" type="radio" name="type" checked>
               <span class="radio__icon"></span>
-              Аксессуар для интерьера
+              <span class="radio__label">Аксессуар для интерьера</span>
             </label>
             <label class="form__item radio">
               <input class="radio__input" type="radio" name="type">
               <span class="radio__icon"></span>
-              Детская игрушка
+              <span class="radio__label">Детская игрушка</span>
             </label>
           </fieldset>
           <fieldset class="form__field">
@@ -127,23 +130,29 @@
           <fieldset class="form__field">
             <legend class="form__title">Тел</legend>
             <label class="form__item textfield" for="tel">
+              <svg class="textfield__icon" width="25" height="24">
+                <use href="img/sprite.svg#icon-phone"></use>
+              </svg>
+              <span class="visually-hidden">Ваш телефон</span>
               <input class="textfield__input" type="tel" name="tel" id="tel"  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-              <img src="img/icon-phone.svg" alt="">
             </label>
           </fieldset>
           <fieldset class="form__field">
             <legend class="form__title">E-mail</legend>
             <label class="form__item textfield" for="email">
+              <svg class="textfield__icon" width="32" height="21">
+                <use href="img/sprite.svg#icon-mail"></use>
+              </svg>
+              <span class="visually-hidden">Ваш email</span>
               <input class="textfield__input" type="email" name="email" id="email"  placeholder="Ваш Email*" required>
-              <img src="img/icon-mail.svg" alt="">
             </label>
           </fieldset>
           <fieldset class="form__field">
             <legend class="form__title">Доп</legend>
-            <textarea class="form__textarea" name="wishes" id="wishes" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="form__textarea" name="wishes" id="wishes" cols="30" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <p class="form__text">*Поля обязательны для заполнения</p>
+            <button class="form__button button" type="submit">Отправить заказ</button>
           </fieldset>
-          <p class="form__text">*Поля обязательны для заполнения</p>
-          <button class="form__button button" type="submit">Отправить заказ</button>
         </form>
       </section>
     </main>
