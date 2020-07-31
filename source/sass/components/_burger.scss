@@ -1,0 +1,36 @@
+.burger {
+  display: block;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  @include size(32px, 32px);
+
+  &:hover,
+  &:focus {
+    fill: var(--special-green);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $medium) {
+    display: none;
+  }
+}
+
+.burger__icon {
+  display: block;
+}
+
+.burger__open,
+.menu__button--open .burger__close {
+  display: block;
+}
+
+.burger__close,
+.menu__button--open .burger__open {
+  display: none;
+}

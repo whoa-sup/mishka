@@ -1,0 +1,142 @@
+// product
+
+.product {
+  display: grid;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media only screen and (min-width: $medium) and (max-width: $large) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// link
+
+.product__link {
+  display: block;
+}
+
+// image
+
+.product__image {
+  display: block;
+  width: 100%;
+
+  background-color: var(--shadow-grey, #ececec);
+}
+
+// caption
+
+.product__caption {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+
+  border: 1px solid var(--shadow-grey, #ececec);
+}
+
+// heading
+
+.product__heading {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+
+  @media only screen and (min-width: $medium) {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// stats
+
+.product__stats {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 30px;
+  color: var(--special-black, #444444);
+
+  @media only screen and (min-width: $medium) {
+    font-size: 15px;
+  }
+}
+
+// wrap
+
+.product__wrap {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: var(--shadow-grey, #ececec);
+  }
+}
+
+// price
+
+.product__price {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
+
+  @media only screen and (min-width: $medium) {
+    font-size: 17px;
+  }
+}
+
+// cart
+
+.product__cart {
+  display: block;
+
+  &:hover .product__icon,
+  &:focus .product__icon {
+    opacity: 1;
+
+    fill: var(--basic-green, #63d1bb);
+  }
+
+  &:active .product__icon {
+    opacity: 0.3;
+
+    fill: var(--basic-green, #63d1bb);
+  }
+}
+
+// icon
+
+.product__icon {
+  opacity: 0.2;
+
+  fill: var(--basic-black, #000000);
+}

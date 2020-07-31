@@ -1,0 +1,11 @@
+.page {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.page__body {
+  display: grid;
+  margin: 0;
+  min-width: $small;
+
+  grid-template-rows: min-content 1fr min-content;
+}

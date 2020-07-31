@@ -1,0 +1,33 @@
+// table
+
+.table {
+  width: 100%;
+  margin-bottom: 28px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+// row
+
+.table__row {
+  display: flex;
+  padding: 9px 0;
+
+  border-bottom: 1px solid var(--shadow-grey);
+}
+
+// termin
+
+.table__termin {
+  width: 33%;
+  margin-right: 10px;
+}
+
+// definition
+
+.table__definition {
+  width: calc(66% - 10px);
+}

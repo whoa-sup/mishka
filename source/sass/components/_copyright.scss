@@ -1,0 +1,29 @@
+// copyright
+
+.copyright {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 18px;
+}
+
+.copyright__link {
+  display: grid;
+
+  grid-column-gap: 27px;
+  grid-template-columns: auto auto;
+  place-items: center;
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    fill: var(--special-green);
+  }
+
+  &:active .copyright__icon {
+    opacity: 0.3;
+  }
+}
+
+.copyright__icon {
+  fill: var(--basic-green);
+}

@@ -1,0 +1,37 @@
+// reviews
+
+// title
+
+.reviews__title {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+// list
+
+.reviews__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+// controls
+
+.reviews__controls {
+  display: flex;
+  margin-bottom: 35px;
+}
+
+// button
+
+.reviews__button {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}

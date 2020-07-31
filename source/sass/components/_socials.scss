@@ -1,0 +1,32 @@
+// socials
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0 40px;
+
+  list-style: none;
+}
+
+// item
+
+.socials__item {
+  margin: 0 20px;
+}
+
+// link
+
+.socials__link {
+  &:hover .socials__icon,
+  &:focus .socials__icon {
+    fill: var(--special-green);
+  }
+
+  &:active .socials__icon {
+    opacity: 0.3;
+  }
+}

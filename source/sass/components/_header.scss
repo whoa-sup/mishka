@@ -1,0 +1,16 @@
+.header {
+  position: relative;
+  display: grid;
+}
+
+// logo
+
+.header__logo {
+  outline: 1px solid red;
+}
+
+// menu
+
+.header__menu {
+  outline: 1px solid blue;
+}
