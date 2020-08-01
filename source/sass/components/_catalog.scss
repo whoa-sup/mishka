@@ -1,0 +1,17 @@
+// catalog
+
+.catalog {
+  padding: 30px;
+  display: grid;
+  grid-row-gap: 30px;
+
+  @media only screen and (min-width: $medium) {
+    padding: 65px 50px;
+    grid-row-gap: 53px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding: 105px 50px;
+    grid-row-gap: 57px;
+  }
+}

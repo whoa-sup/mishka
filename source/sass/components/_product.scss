@@ -2,6 +2,7 @@
 
 .product {
   display: grid;
+  grid-template-rows: min-content auto;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -64,7 +65,7 @@
 
 .product__stats {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: auto;
 
   font-style: normal;
   font-weight: normal;
@@ -85,7 +86,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
+  margin-top: 40px;
 
   &::before {
     content: "";
