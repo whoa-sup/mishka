@@ -6,19 +6,30 @@
   align-items: center;
   padding: 25px;
 
-  color: var(--basic-black);
+  color: var(--basic-black, #000000);
 
-  background-color: var(--special-grey);
+  background-color: var(--special-grey, #f1f1f1);
 
-  @media (min-width: $medium) {
-    flex-direction: row;
+  @media only screen and (min-width: $medium) {
+    display: grid;
+    padding: 50px;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// logo
+
+.footer__logo {
+  @media only screen and (max-width: $smallOnly) {
+    display: none;
   }
 }
 
 // socials
 
 .footer__socials {
-  @media (max-width: $medium) {
+  @media only screen and (max-width: $smallOnly) {
     position: relative;
 
     margin-bottom: 45px;
