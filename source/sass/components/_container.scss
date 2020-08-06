@@ -1,0 +1,50 @@
+// container
+
+.container {
+  @media only screen and (min-width: $medium) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    &::after {
+      bottom: -17px;
+      left: 0;
+
+      height: 34px;
+    }
+  }
+
+  &--line {
+    @media only screen and (min-width: $medium) {
+      &::after {
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 17px;
+
+        background-image: url("../img/bg-zigzag-line.svg");
+        background-size: contain;
+      }
+    }
+
+    @media only screen and (min-width: $large) {
+      &::after {
+        height: 23px;
+      }
+    }
+  }
+}
