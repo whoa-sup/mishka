@@ -58,11 +58,11 @@
     </header>
     <!-- Main -->
     <main class="catalog">
-      <section class="intro">
+      <section class="intro container">
         <h1 class="intro__title">Каталог товаров</h1>
       </section>
       <!-- goods -->
-      <section class="main__goods goods">
+      <section class="catalog__goods goods">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="goods__list">
           <li class="goods__item">
@@ -125,9 +125,8 @@
         </ul>
       </section>
       <!-- production -->
-      <section class="main__production production">
-        <h2 class="production__title">Процесс производства</h2>
-        <div class="production__container">
+      <section class="catalog__production production">
+        <div class="production__video">
           <img class="production__image" src="../img/video-mobile@1x.jpg"  width="260" height="150" alt="Видео процесса производства наших товаров">
           <a class="production__link" href="#">
             <svg class="production__play" width="101" height="77">
@@ -135,13 +134,18 @@
             </svg>
           </a>
         </div>
-        <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__button button" href="order.html">Сделать заказ</a>
+        <div class="production__container">
+          <h2 class="production__title">Процесс производства</h2>
+          <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__button button" href="order.html">Сделать заказ</a>
+        </div>
       </section>
-
     </main>
     <!-- Footer -->
     <footer class="footer">
+      <a class="footer__logo footer-logo" href="index.html">
+        <img class="footer-logo__image" src="img/logo-footer.svg" width="102" height="34" alt="Интернет-магазин игрушек ручной работы Mishka">
+      </a>
       <!-- socials -->
       <ul class="socials footer__socials">
         <li class="socials__item">

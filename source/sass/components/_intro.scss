@@ -1,16 +1,43 @@
 // intro
 
 .intro {
+  margin-bottom: 30px;
   padding: 73px 22px;
 
   text-align: center;
   color: var(--basic-black);
 
   background-color: var(--special-grey);
+
+  @media only screen and (min-width: $medium) {
+    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+
+  @media only screen and (min-width: $large) {
+    margin-bottom: 100px;
+    padding-bottom: 95px;
+  }
 }
 
 // title
 
 .intro__title {
   margin: 0;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 30px;
+
+  @media only screen and (min-width: $medium) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media only screen and (min-width: $large) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
