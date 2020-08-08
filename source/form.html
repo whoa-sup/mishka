@@ -79,38 +79,52 @@
               <span class="radio__label">Детская игрушка</span>
             </label>
           </fieldset>
-          <fieldset class="form__field">
+          <fieldset class="form__field form__field--grey">
             <legend class="form__title">Цвет</legend>
-            <label class="form__item checkbox">
-              <input class="checkbox__input" type="checkbox" name="type" checked>
-              <span class="checkbox__icon"></span>
-              Белый
-            </label>
-            <label class="form__item checkbox">
-              <input class="checkbox__input" type="checkbox" name="type" checked>
-              <span class="checkbox__icon"></span>
-              Серый
-            </label>
-            <label class="form__item checkbox">
-              <input class="checkbox__input" type="checkbox" name="type">
-              <span class="checkbox__icon"></span>
-              «Тиффани»
-            </label>
-            <label class="form__item checkbox">
-              <input class="checkbox__input" type="checkbox" name="type">
-              <span class="checkbox__icon"></span>
-              Черный
-            </label>
-            <label class="form__item checkbox">
-              <input class="checkbox__input" type="checkbox" name="type">
-              <span class="checkbox__icon"></span>
-              Розовый
-            </label>
-            <label class="form__item checkbox">
-              <input class="checkbox__input" type="checkbox" name="type">
-              <span class="checkbox__icon"></span>
-              Оранжевый
-            </label>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type" checked>
+                  <span class="checkbox__icon"></span>
+                  Белый
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type" checked>
+                  <span class="checkbox__icon"></span>
+                  Серый
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type">
+                  <span class="checkbox__icon"></span>
+                  «Тиффани»
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type">
+                  <span class="checkbox__icon"></span>
+                  Черный
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type">
+                  <span class="checkbox__icon"></span>
+                  Розовый
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="type">
+                  <span class="checkbox__icon"></span>
+                  Оранжевый
+                </label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="form__field">
             <legend class="form__title">Фио</legend>
@@ -127,37 +141,42 @@
               <input class="textfield__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </label>
           </fieldset>
-          <fieldset class="form__field">
+          <fieldset class="form__field form__field--grey">
             <legend class="form__title">Тел</legend>
-            <label class="form__item textfield" for="tel">
-              <svg class="textfield__icon" width="25" height="24">
+            <label class="form__item contact" for="tel">
+              <span class="visually-hidden">Ваш телефон</span>
+              <input class="contact__input" type="tel" name="tel" id="tel"  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              <svg class="contact__icon" width="25" height="24">
                 <use href="img/sprite.svg#icon-phone"></use>
               </svg>
-              <span class="visually-hidden">Ваш телефон</span>
-              <input class="textfield__input" type="tel" name="tel" id="tel"  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </label>
           </fieldset>
-          <fieldset class="form__field">
+          <fieldset class="form__field form__field--grey">
             <legend class="form__title">E-mail</legend>
-            <label class="form__item textfield" for="email">
-              <svg class="textfield__icon" width="32" height="21">
+            <label class="form__item contact" for="email">
+              <span class="visually-hidden">Ваш email</span>
+              <input class="contact__input" type="email" name="email" id="email"  placeholder="Ваш Email*" required>
+              <svg class="contact__icon" width="32" height="21">
                 <use href="img/sprite.svg#icon-mail"></use>
               </svg>
-              <span class="visually-hidden">Ваш email</span>
-              <input class="textfield__input" type="email" name="email" id="email"  placeholder="Ваш Email*" required>
             </label>
           </fieldset>
           <fieldset class="form__field">
             <legend class="form__title">Доп</legend>
             <textarea class="form__textarea" name="wishes" id="wishes" cols="30" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </fieldset>
+          <div class="form__container">
             <p class="form__text">*Поля обязательны для заполнения</p>
             <button class="form__button button" type="submit">Отправить заказ</button>
-          </fieldset>
+          </div>
         </form>
       </section>
     </main>
-    <!-- Footer -->
-    <footer class="footer">
+     <!-- Footer -->
+     <footer class="footer">
+      <a class="footer__logo footer-logo" href="index.html">
+        <img class="footer-logo__image" src="img/logo-footer.svg" width="102" height="34" alt="Интернет-магазин игрушек ручной работы Mishka">
+      </a>
       <!-- socials -->
       <ul class="socials footer__socials">
         <li class="socials__item">

@@ -1,8 +1,6 @@
 // textfield
 
 .textfield {
-  position: relative;
-
   display: grid;
   align-items: center;
 
@@ -37,22 +35,4 @@
   &:focus {
     border-color: #62d1ba;
   }
-
-  &:hover + .textfield__icon,
-  &:focus + .textfield__icon {
-    opacity: 1;
-
-    fill: #62d1ba;
-  }
-}
-
-// icon
-
-.textfield__icon {
-  position: absolute;
-  top: 50%;
-  right: 0;
-
-  transform: translateY(-50%);
-  opacity: 0.2;
 }
