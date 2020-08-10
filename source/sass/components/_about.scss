@@ -1,26 +1,29 @@
 // about
 
 .about {
-  max-width: 1050px;
-  margin: 0 auto;
-
   color: var(--basic-black, #000000);
 
   background-color: var(--basic-white, #ffffff);
+}
 
+// container
+
+.about__container {
   @media only screen and (min-width: $medium) {
     padding-top: 70px;
     padding-bottom: 85px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-left: 225px;
   }
 }
 
 // title
 
 .about__title {
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 15px;
-  padding-right: 30px;
-  padding-left: 30px;
 
   font-style: normal;
   font-weight: bold;
@@ -29,16 +32,12 @@
 
   @media only screen and (min-width: $medium) {
     margin-bottom: 35px;
-    padding-right: 50px;
-    padding-left: 50px;
 
     font-size: 43px;
     line-height: 50px;
   }
 
   @media only screen and (min-width: $large) {
-    padding-left: 175px;
-
     font-size: 53px;
     line-height: 57px;
   }
@@ -48,23 +47,14 @@
 
 .about__list {
   display: grid;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 40px;
   padding: 0;
-  padding-right: 30px;
-  padding-left: 30px;
 
   list-style: none;
 
   @media only screen and (min-width: $medium) {
-    padding-right: 50px;
-    padding-left: 50px;
-
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media only screen and (min-width: $large) {
-    padding-left: 175px;
   }
 }
 

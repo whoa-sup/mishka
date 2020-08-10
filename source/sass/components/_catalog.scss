@@ -7,11 +7,9 @@
 // goods
 
 .catalog__goods {
-  margin: 0 30px;
   margin-bottom: 30px;
 
   @media only screen and (min-width: $medium) {
-    margin: 0 50px;
     margin-bottom: 50px;
   }
 
@@ -23,13 +21,7 @@
 // production
 
 .catalog__production {
-  margin: 0 30px;
   margin-bottom: 60px;
-
-  @media only screen and (min-width: $medium) {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
 
   @media only screen and (min-width: $large) {
     margin-bottom: 105px;

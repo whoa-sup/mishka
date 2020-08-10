@@ -6,7 +6,6 @@
   display: grid;
   margin: 0 auto;
   min-width: $small;
-  max-width: $large;
 
   grid-template-rows: min-content 1fr min-content;
 }

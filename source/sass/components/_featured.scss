@@ -1,10 +1,13 @@
 // featured
 
 .featured {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 30px;
+  background-color: var(--basic-white, #ffffff);
+  color: var(--basic-black, #000000);
+}
 
+// container
+
+.featured__container {
   @media only screen and (min-width: $medium) {
     display: grid;
     padding: 50px;
@@ -21,9 +24,9 @@
   }
 }
 
-// container
+// wrapper
 
-.featured__container {
+.featured__wrapper {
   display: grid;
   margin: 0;
   padding: 0;

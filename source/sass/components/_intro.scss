@@ -1,13 +1,19 @@
 // intro
 
 .intro {
-  margin-bottom: 30px;
-  padding: 73px 22px;
-
-  text-align: center;
   color: var(--basic-black);
 
   background-color: var(--special-grey);
+}
+
+// container
+
+.intro__container {
+  margin-bottom: 30px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  text-align: center;
 
   @media only screen and (min-width: $medium) {
     margin-bottom: 50px;
@@ -16,7 +22,6 @@
   }
 
   @media only screen and (min-width: $large) {
-    margin-bottom: 100px;
     padding-bottom: 95px;
   }
 }

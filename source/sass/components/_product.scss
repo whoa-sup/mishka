@@ -8,7 +8,7 @@
 
   grid-template-rows: min-content auto;
 
-  @media only screen and (min-width: $medium) and (max-width: $large) {
+  @media only screen and (min-width: $medium) and (max-width: $mediumOnly) {
     grid-template-columns: 1fr 1fr;
   }
 }

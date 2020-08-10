@@ -7,27 +7,29 @@
 // field
 
 .form__field {
-  position: relative;
-
-  margin: 0;
-  padding: 50px 30px;
-
   border: none;
-  outline: 1px solid red;
-
-  @media only screen and (min-width: $medium) {
-    padding: 50px;
-    padding-left: 215px;
-  }
-
-  @media only screen and (min-width: $large) {
-    padding: 50px 225px;
-  }
+  margin: 0;
+  padding: 0;
 
   &--grey {
     @media only screen and (min-width: $medium) {
       background-color: var(--special-grey, #f1f1f1);
     }
+  }
+}
+
+// container
+
+.form__container {
+  position: relative;
+  outline: 1px solid red;
+
+  @media only screen and (min-width: $medium) {
+    padding-left: 215px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-left: 225px;
   }
 }
 
@@ -98,25 +100,6 @@
     color: inherit;
 
     opacity: 0.3;
-  }
-}
-
-// container
-
-.form__container {
-  padding: 30px;
-
-  @media only screen and (min-width: $medium) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-  @media only screen and (min-width: $large) {
-    padding-right: 225px;
-    padding-left: 225px;
   }
 }
 

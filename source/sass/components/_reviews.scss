@@ -1,23 +1,34 @@
 // reviews
 
 .reviews {
-  padding: 30px;
+  @media only screen and (min-width: $medium) {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  @media only screen and (min-width: $large) {
+    background-image: none;
+  }
+}
+
+// container
+
+.reviews__container {
+  max-width: 1050px;
 
   @media only screen and (min-width: $medium) {
     display: grid;
-    padding: 50px;
     padding-top: 80px;
-
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
 
     grid-template-columns: auto min-content;
   }
 
   @media only screen and (min-width: $large) {
-    padding-right: 0;
     padding-bottom: 95px;
     padding-left: 175px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
   }
 }
 

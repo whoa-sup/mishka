@@ -1,16 +1,43 @@
 .header {
+  background-color: var(--basic-white, #ffffff);
+
+  @media only screen and (min-width: $medium) {
+    margin-bottom: -64px;
+  }
+}
+
+// container
+
+.header__container {
   position: relative;
-  display: grid;
+
+  padding: 0;
 }
 
 // logo
 
 .header__logo {
-  outline: 1px solid red;
+  @media only screen and (min-width: $medium) {
+    position: absolute;
+    top: 5px;
+    left: 50px;
+
+    width: 113px;
+  }
+
+  @media only screen and (min-width: $large) {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+
+    width: 113px;
+
+    transform: translateX(-50%);
+  }
 }
 
 // menu
 
 .header__menu {
-  outline: 1px solid blue;
+  // пока пусто
 }
