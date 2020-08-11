@@ -1,17 +1,29 @@
 // catalog
 
 .catalog {
-  padding: 30px;
   display: grid;
-  grid-row-gap: 30px;
+}
+
+// goods
+
+.catalog__goods {
+  margin-bottom: 30px;
 
   @media only screen and (min-width: $medium) {
-    padding: 65px 50px;
-    grid-row-gap: 53px;
+    margin-bottom: 50px;
   }
 
   @media only screen and (min-width: $large) {
-    padding: 105px 50px;
-    grid-row-gap: 57px;
+    margin-bottom: 57px;
+  }
+}
+
+// production
+
+.catalog__production {
+  margin-bottom: 60px;
+
+  @media only screen and (min-width: $large) {
+    margin-bottom: 105px;
   }
 }

@@ -13,4 +13,8 @@
   &[href]:active {
     opacity: 0.3;
   }
+
+  @media only screen and (min-width: $medium) {
+    box-shadow: none;
+  }
 }

@@ -1,6 +1,8 @@
 // copyright
 
 .copyright {
+  justify-self: end;
+
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
@@ -11,7 +13,7 @@
   display: grid;
 
   grid-column-gap: 27px;
-  grid-template-columns: auto auto;
+  grid-template-columns: min-content min-content;
   place-items: center;
 
   &:hover .copyright__icon,

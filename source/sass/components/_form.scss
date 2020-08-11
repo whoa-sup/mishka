@@ -1,36 +1,75 @@
 // form
 
 .form {
-  width: 320px;
-  margin: 0 auto;
-
-  outline: 1px solid red;
-
-  @media only screen and (min-width: $medium) {
-    width: $medium;
-  }
+  outline: 1px solid blue;
 }
 
 // field
 
 .form__field {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 15px 30px;
-
   border: none;
+  margin: 0;
+  padding: 0;
+
+  &--grey {
+    @media only screen and (min-width: $medium) {
+      background-color: var(--special-grey, #f1f1f1);
+    }
+  }
+}
+
+// container
+
+.form__container {
+  position: relative;
+  outline: 1px solid red;
+
+  @media only screen and (min-width: $medium) {
+    padding-left: 215px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-left: 225px;
+  }
 }
 
 // title
 
 .form__title {
+  position: absolute;
+  top: 10px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
   color: var(--basic-green);
   text-transform: uppercase;
+
+  @media only screen and (min-width: $medium) {
+    top: 66px;
+    left: 50px;
+  }
+}
+
+// list
+
+.form__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media only screen and (min-width: $medium) {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: $large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // item
@@ -75,6 +114,13 @@
   font-size: 14px;
   line-height: 16px;
   color: var(--special-black, #444444);
+
+  @media only screen and (min-width: $medium) {
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 // button
@@ -87,4 +133,11 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
+
+  @media only screen and (min-width: $medium) {
+    order: -1;
+    max-width: 230px;
+    margin: 0;
+    margin-right: 10px;
+  }
 }

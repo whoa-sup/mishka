@@ -1,17 +1,31 @@
 .promo {
-  display: grid;
-
+  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+  background-position: 50% -20px;
 
-  @media (min-width: $medium) {
+  @media only screen and (min-width: $medium) {
     background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: center center;
   }
 
-  @media (min-width: $large) {
+  @media only screen and (min-width: $large) {
     background-image: url("../img/hero-desktop@1x.jpg");
+  }
+}
+
+// container
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 490px;
+  padding-top: 70px;
+
+  @media only screen and (min-width: $medium) {
+    min-height: 746px;
+    padding-top: 155px;
   }
 }
 
@@ -20,7 +34,6 @@
 .promo__title {
   margin: 0;
   margin-bottom: 120px;
-  padding-top: 70px;
   padding-right: 30px;
   padding-left: 30px;
 
@@ -29,6 +42,16 @@
   font-size: 27px;
   line-height: 30px;
   text-align: center;
+
+  @media only screen and (min-width: $medium) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media only screen and (min-width: $large) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 // list
@@ -40,7 +63,7 @@
 
   list-style: none;
 
-  @media (min-width: $medium) {
+  @media only screen and (min-width: $medium) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -52,6 +75,11 @@
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
+
+  @media only screen and (min-width: $medium) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 // link
@@ -62,12 +90,12 @@
 
   color: var(--basic-white);
 
-  background-color: var(--basic-green);
+  background-color: var(--basic-green, #63d1bb);
 
   grid-template-columns: min-content auto;
 
   &--dark {
-    background-color: var(--basic-green-dark);
+    background-color: var(--basic-green-dark, #56c3b2);
   }
 
   &:hover .promo__icon,

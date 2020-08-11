@@ -4,9 +4,14 @@
   width: 50%;
   margin: 0;
   padding: 13px;
+  border: none;
 
   background-color: var(--basic-white);
-  border: 1px solid var(--shadow-grey);
+  outline: 1px solid var(--shadow-grey);
+
+  @media only screen and (min-width: $medium) {
+    outline: none;
+  }
 
   &:hover .arrow-button__icon,
   &:focus .arrow-button__icon {

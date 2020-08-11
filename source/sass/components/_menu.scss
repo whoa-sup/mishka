@@ -1,7 +1,9 @@
 // menu
 
 .menu {
-  display: grid;
+  &--no-js .menu__button {
+    display: none;
+  }
 }
 
 // button
@@ -17,34 +19,128 @@
 // list
 
 .menu__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
-}
 
-// item
+  @media only screen and (min-width: $medium) {
+    display: grid;
 
-.menu__item {
-  padding: 28px;
-  padding-left: 76px;
+    grid-template-areas: ". actions" "pages tagline";
+    grid-template-columns: auto auto;
+  }
 
-  box-shadow: 0 1px 0 var(--shadow-grey), inset 0 1px 0 var(--shadow-grey);
-}
-
-.menu__item--large {
-  display: none;
-
-  @media (min-width: $large) {
-    display: block;
+  @media only screen and (min-width: $large) {
+    grid-column-gap: 10px;
+    grid-template-areas: "pages . actions" "news . tagline";
+    grid-template-columns: 1fr 150px 1fr;
   }
 }
 
-.menu__item--medium {
+// pages
+
+.menu__pages {
+  display: block;
+
+  @media only screen and (min-width: $medium) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+
+    grid-area: pages;
+
+    & .menu__link {
+      padding: 20px 0;
+
+      font-size: 15px;
+
+      &:not(:last-child) {
+        margin-right: 36px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    margin: 0;
+
+    & .menu__link {
+      margin: 0;
+      padding: 32px 0;
+      padding-right: 35px;
+      padding-left: 50px;
+
+      font-size: 17px;
+
+      &:not(:last-child) {
+        margin: 0;
+      }
+
+      &:last-child {
+        padding-left: 35px;
+      }
+    }
+  }
+}
+
+// actions
+
+.menu__actions {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: $medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+
+    grid-area: actions;
+  }
+}
+
+// news
+
+.menu__news {
   display: none;
 
-  @media (min-width: $medium) {
-    display: block;
+  @media only screen and (min-width: $large) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+
+    grid-area: news;
+
+    & .menu__link {
+      padding: 20px 0;
+
+      font-size: 15px;
+
+      &:not(:last-child) {
+        margin-right: 36px;
+      }
+    }
+  }
+}
+
+// tagline
+
+.menu__tagline {
+  display: none;
+
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--special-black);
+
+  @media only screen and (min-width: $medium) {
+    display: flex;
+    margin-right: 50px;
+    margin-left: auto;
+
+    grid-area: tagline;
+    place-items: center;
   }
 }
 
@@ -53,20 +149,62 @@
 .menu__link {
   position: relative;
 
+  display: flex;
+  padding: 30px;
+  padding-left: 76px;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: var(--basic-black);
 
-  background-color: var(--basic-white);
+  background-color: transparent;
+  box-shadow: 0 1px 0 var(--shadow-grey), inset 0 1px 0 var(--shadow-grey);
 
-  &:hover,
-  &:focus {
+  place-items: center;
+
+  &:hover .menu__text,
+  &:focus .menu__text {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active .menu__text {
     opacity: 0.3;
+  }
+
+  &:hover .menu__icon,
+  &:focus .menu__icon {
+    opacity: 1;
+
+    fill: var(--basic-green);
+  }
+
+  &:active .menu__icon {
+    opacity: 0.3;
+  }
+
+  @media only screen and (min-width: $medium) {
+    box-shadow: none;
+  }
+
+  &--search {
+    @media only screen and (min-width: $medium) {
+      padding: 32px;
+
+      font-size: 0;
+
+      border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+      border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+
+  &--cart {
+    @media only screen and (min-width: $medium) {
+      flex-grow: 1;
+      padding-top: 32px;
+      padding-right: 50px;
+      padding-bottom: 32px;
+    }
   }
 }
 
@@ -75,7 +213,19 @@
 .menu__icon {
   position: absolute;
   top: 50%;
-  left: -45px;
+  left: 45px;
 
-  transform: translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+  fill: rgba($color: #000000, $alpha: 0.2);
+
+  &--search {
+    @media only screen and (min-width: $medium) {
+      position: relative;
+      top: unset;
+      left: unset;
+
+      transform: unset;
+    }
+  }
 }

@@ -1,37 +1,43 @@
 // about
 
 .about {
-  padding: 30px;
+  color: var(--basic-black, #000000);
 
-  color: var(--basic-black);
+  background-color: var(--basic-white, #ffffff);
+}
 
-  background-color: var(--basic-white);
+// container
+
+.about__container {
+  @media only screen and (min-width: $medium) {
+    padding-top: 70px;
+    padding-bottom: 85px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-left: 225px;
+  }
 }
 
 // title
 
 .about__title {
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 15px;
 
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
 
-  @media (min-width: $medium) {
-    width: 668px;
+  @media only screen and (min-width: $medium) {
     margin-bottom: 35px;
 
     font-size: 43px;
     line-height: 50px;
   }
 
-  @media (min-width: $large) {
-    width: 668px;
-    margin-bottom: 35px;
-
+  @media only screen and (min-width: $large) {
     font-size: 53px;
     line-height: 57px;
   }
@@ -41,16 +47,13 @@
 
 .about__list {
   display: grid;
-  width: 260px;
-  margin: 0 auto;
+  margin: 0;
   margin-bottom: 40px;
   padding: 0;
 
   list-style: none;
 
-  @media (min-width: $medium) {
-    width: 668px;
-
+  @media only screen and (min-width: $medium) {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -59,13 +62,14 @@
 
 .about__item {
   margin-bottom: 20px;
+  padding-right: 20px;
 
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
 
-  @media (min-width: $medium) {
+  @media only screen and (min-width: $medium) {
     margin-bottom: 50px;
 
     font-size: 20px;
@@ -127,7 +131,7 @@
 .about__icon {
   display: block;
 
-  fill: var(--basic-green);
+  fill: var(--basic-green, #63d1bb);
 }
 
 // tagline

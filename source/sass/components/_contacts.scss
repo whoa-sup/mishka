@@ -1,37 +1,68 @@
 // contacts
 
 .contacts {
-  color: var(--special-black);
+  color: var(--special-black, #444444);
 
-  background-color: var(--basic-white);
+  background-color: var(--basic-white, #ffffff);
 }
 
 // container
 
 .contacts__container {
+  padding: 0;
+
+  @media only screen and (min-width: $large) {
+    display: grid;
+    padding-top: 70px;
+    padding-right: 50px;
+    padding-bottom: 105px;
+    padding-left: 225px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// info
+
+.contacts__info {
   padding: 30px;
-  padding-bottom: 0;
+
+  @media only screen and (min-width: $medium) {
+    padding: 50px;
+
+    @media only screen and (max-width: $mediumOnly) {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-left: 0;
+
+    grid-column: 1/2;
+  }
 }
 
 // title
 
 .contacts__title {
-  width: 260px;
-  margin: 0 auto;
   margin-bottom: 25px;
 
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
-  color: var(--basic-black);
+  color: var(--basic-black, #000000);
 
-  @media (min-width: $medium) {
+  @media only screen and (min-width: $medium) {
     font-size: 43px;
     line-height: 50px;
+
+    grid-column: 1/-1;
   }
 
-  @media (min-width: $large) {
+  @media only screen and (min-width: $large) {
     font-size: 53px;
     line-height: 57px;
   }
@@ -41,9 +72,6 @@
 
 .contacts__wrapper {
   display: grid;
-  width: 260px;
-  margin: 0 auto;
-  margin-bottom: 30px;
 
   font-style: normal;
   font-weight: normal;
@@ -52,8 +80,9 @@
 
   grid-column-gap: 30px;
   grid-template-columns: max-content auto;
+  justify-items: start;
 
-  @media (min-width: $medium) {
+  @media only screen and (min-width: $medium) {
     font-size: 17px;
   }
 }
@@ -62,6 +91,8 @@
 
 .contacts__email {
   position: relative;
+
+  margin-bottom: 30px;
 
   &::after {
     content: "";
@@ -77,12 +108,12 @@
 
   &:hover,
   &:focus {
-    color: var(--special-green);
+    color: var(--special-green, #46c1ae);
   }
 
   &:hover::after,
   &:focus::after {
-    background-color: var(--special-green);
+    background-color: var(--special-green, #46c1ae);
   }
 
   &:active::after {
@@ -94,6 +125,11 @@
 
 .contacts__map {
   margin-bottom: 40px;
+
+  @media only screen and (min-width: $large) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
 }
 
 //  button
@@ -106,4 +142,17 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
+
+  @media only screen and (min-width: $medium) {
+    width: 230px;
+    margin: 55px auto;
+  }
+
+  @media only screen and (min-width: $large) {
+    align-self: end;
+    margin: 0;
+
+    grid-column: 1/2;
+    justify-self: start;
+  }
 }

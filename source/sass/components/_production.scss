@@ -1,38 +1,83 @@
 // production
 
 .production {
-  background-color: var(--basic-white, #ffffff);
+  display: grid;
+
   color: var(--special-black, #444444);
+
+  background-color: var(--basic-white, #ffffff);
+  border: 1px solid var(--shadow-grey, #ececec);
+
+  @media only screen and (min-width: $medium) {
+    border: none;
+  }
+
+  @media only screen and (min-width: $large) {
+    grid-template-columns: 65% auto;
+  }
+}
+
+// wrapper
+
+.production__wrapper {
+  display: contents;
+
+  border: 1px solid var(--shadow-grey, #ececec);
+
+  @media only screen and (min-width: $medium) {
+    display: block;
+  }
+
+  @media only screen and (min-width: $medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 // title
 
 .production__title {
-  margin: 0;
-  color: var(--basic-black, #000000);
+  order: -1;
+  margin: 20px 34px;
+  padding-left: 60px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  color: var(--basic-black, #000000);
 
   @media only screen and (min-width: $medium) {
+    order: 0;
+
     font-size: 20px;
   }
 }
 
-// container
+// video
 
-.production__container {
+.production__video {
   position: relative;
+
+  margin-right: -1px;
+  margin-bottom: 35px;
+  margin-left: -1px;
+
+  @media only screen and (min-width: $medium) {
+    margin: 0;
+  }
 }
 
 // link
 
 .production__link {
-  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
+
+  display: block;
+
   transform: translateX(-50%) translateY(-50%);
 
   &:hover .production__play,
@@ -51,13 +96,13 @@
 .production__image {
   display: block;
   width: 100%;
+
   background-color: var(--special-grey, #ececec);
 }
 
 // play
 
 .production__play {
-
   fill: #ececec;
   stroke: black;
 }
@@ -66,6 +111,10 @@
 
 .production__text {
   margin: 0;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  margin-left: 34px;
+
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -80,6 +129,9 @@
 // button
 
 .production__button {
+  margin: 0 34px;
+  margin-bottom: 33px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 17px;

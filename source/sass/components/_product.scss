@@ -2,12 +2,13 @@
 
 .product {
   display: grid;
-  grid-template-rows: min-content auto;
   width: 100%;
   margin: 0;
   padding: 0;
 
-  @media only screen and (min-width: $medium) and (max-width: $large) {
+  grid-template-rows: min-content auto;
+
+  @media only screen and (min-width: $medium) and (max-width: $mediumOnly) {
     grid-template-columns: 1fr 1fr;
   }
 }
