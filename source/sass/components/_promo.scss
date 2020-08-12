@@ -3,6 +3,7 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% -20px;
+  outline: 1px solid red;
 
   @media only screen and (min-width: $medium) {
     background-image: url("../img/hero-tablet@1x.jpg");

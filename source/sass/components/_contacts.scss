@@ -10,6 +10,13 @@
 
 .contacts__container {
   padding: 0;
+  padding-bottom: 39px;
+
+  outline: 1px solid red;
+
+  @media only screen and (min-width: $medium) {
+    padding-bottom: 57px;
+  }
 
   @media only screen and (min-width: $large) {
     display: grid;
@@ -18,7 +25,8 @@
     padding-bottom: 105px;
     padding-left: 225px;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-template-columns: auto 60%;
   }
 }
 
@@ -26,9 +34,13 @@
 
 .contacts__info {
   padding: 30px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 
   @media only screen and (min-width: $medium) {
     padding: 50px;
+    padding-top: 70px;
+    padding-bottom: 35px;
 
     @media only screen and (max-width: $mediumOnly) {
       display: grid;
@@ -38,7 +50,8 @@
   }
 
   @media only screen and (min-width: $large) {
-    padding-left: 0;
+    padding: 0;
+    padding-top: 80px;
 
     grid-column: 1/2;
   }
@@ -47,6 +60,7 @@
 // title
 
 .contacts__title {
+  margin: 0;
   margin-bottom: 25px;
 
   font-style: normal;
@@ -56,6 +70,8 @@
   color: var(--basic-black, #000000);
 
   @media only screen and (min-width: $medium) {
+    margin-bottom: 30px;
+
     font-size: 43px;
     line-height: 50px;
 
@@ -63,6 +79,8 @@
   }
 
   @media only screen and (min-width: $large) {
+    margin-bottom: 35px;
+
     font-size: 53px;
     line-height: 57px;
   }
@@ -84,6 +102,8 @@
 
   @media only screen and (min-width: $medium) {
     font-size: 17px;
+
+    grid-column-gap: 25px;
   }
 }
 
@@ -92,7 +112,11 @@
 .contacts__email {
   position: relative;
 
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+
+  @media only screen and (min-width: $large) {
+    margin-bottom: 15px;
+  }
 
   &::after {
     content: "";
@@ -126,6 +150,10 @@
 .contacts__map {
   margin-bottom: 40px;
 
+  @media only screen and (min-width: $medium) {
+    margin-bottom: 55px;
+  }
+
   @media only screen and (min-width: $large) {
     grid-column: 2/3;
     grid-row: 1/3;
@@ -136,7 +164,6 @@
 
 .contacts__button {
   margin: 0 30px;
-  margin-bottom: 40px;
 
   font-style: normal;
   font-weight: bold;
@@ -145,7 +172,7 @@
 
   @media only screen and (min-width: $medium) {
     width: 230px;
-    margin: 55px auto;
+    margin: 0 auto;
   }
 
   @media only screen and (min-width: $large) {
