@@ -1,7 +1,26 @@
 // catalog
 
 .catalog {
-  display: grid;
+  color: var(--basic-black, #000000);
+
+  background-color: var(--basic-white, #ffffff);
+}
+
+// container
+
+.catalog__container {
+  padding-top: 30px;
+  padding-bottom: 58px;
+
+  @media only screen and (min-width: $medium) {
+    padding-top: 67px;
+    padding-bottom: 63px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-top: 110px;
+    padding-bottom: 105px;
+  }
 }
 
 // goods
@@ -15,15 +34,5 @@
 
   @media only screen and (min-width: $large) {
     margin-bottom: 57px;
-  }
-}
-
-// production
-
-.catalog__production {
-  margin-bottom: 60px;
-
-  @media only screen and (min-width: $large) {
-    margin-bottom: 105px;
   }
 }

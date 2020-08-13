@@ -4,18 +4,23 @@
   color: var(--basic-black, #000000);
 
   background-color: var(--basic-white, #ffffff);
+  outline: 1px solid red;
 }
 
 // container
 
 .about__container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   @media only screen and (min-width: $medium) {
     padding-top: 70px;
     padding-bottom: 85px;
   }
 
   @media only screen and (min-width: $large) {
-    padding-left: 225px;
+    padding-right: 175px;
+    padding-left: 175px;
   }
 }
 
@@ -23,7 +28,7 @@
 
 .about__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 
   font-style: normal;
   font-weight: bold;
@@ -48,7 +53,6 @@
 .about__list {
   display: grid;
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
 
   list-style: none;
@@ -62,15 +66,19 @@
 
 .about__item {
   margin-bottom: 20px;
-  padding-right: 20px;
 
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media only screen and (min-width: $medium) {
     margin-bottom: 50px;
+    padding-right: 20px;
 
     font-size: 20px;
     line-height: 22px;
@@ -85,6 +93,7 @@
 
     &:nth-child(3n) {
       order: 3;
+      margin-bottom: 0;
     }
   }
 }

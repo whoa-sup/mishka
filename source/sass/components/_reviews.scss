@@ -1,34 +1,29 @@
 // reviews
 
 .reviews {
+  outline: 1px solid red;
+
   @media only screen and (min-width: $medium) {
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-  }
-
-  @media only screen and (min-width: $large) {
-    background-image: none;
   }
 }
 
 // container
 
 .reviews__container {
-  max-width: 1050px;
-
   @media only screen and (min-width: $medium) {
     display: grid;
     padding-top: 80px;
 
     grid-template-columns: auto min-content;
+    grid-column-gap: 10px;
   }
 
   @media only screen and (min-width: $large) {
     padding-bottom: 95px;
     padding-left: 175px;
-
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
+    padding-right: 0;
   }
 }
 
@@ -44,7 +39,6 @@
 
   @media only screen and (min-width: $medium) {
     margin-bottom: 30px;
-    padding-right: 175px;
 
     font-size: 43px;
     line-height: 50px;

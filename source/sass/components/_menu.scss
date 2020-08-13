@@ -52,36 +52,38 @@
     margin-left: 50px;
 
     grid-area: pages;
+  }
 
-    & .menu__link {
-      padding: 20px 0;
+  @media only screen and (min-width: $large) {
+    margin: 0;
+  }
+}
 
-      font-size: 15px;
+.menu__pages .menu__link {
+  @media only screen and (min-width: $medium) {
+    padding: 20px 0;
 
-      &:not(:last-child) {
-        margin-right: 36px;
-      }
+    font-size: 15px;
+
+    &:not(:last-child) {
+      margin-right: 36px;
     }
   }
 
   @media only screen and (min-width: $large) {
     margin: 0;
+    padding: 32px 0;
+    padding-right: 35px;
+    padding-left: 50px;
 
-    & .menu__link {
+    font-size: 17px;
+
+    &:not(:last-child) {
       margin: 0;
-      padding: 32px 0;
-      padding-right: 35px;
-      padding-left: 50px;
+    }
 
-      font-size: 17px;
-
-      &:not(:last-child) {
-        margin: 0;
-      }
-
-      &:last-child {
-        padding-left: 35px;
-      }
+    &:last-child {
+      padding-left: 35px;
     }
   }
 }
@@ -112,15 +114,17 @@
     margin-left: 50px;
 
     grid-area: news;
+  }
+}
 
-    & .menu__link {
-      padding: 20px 0;
+.menu__news .menu__link {
+  @media only screen and (min-width: $large) {
+    padding: 20px 0;
 
-      font-size: 15px;
+    font-size: 15px;
 
-      &:not(:last-child) {
-        margin-right: 36px;
-      }
+    &:not(:last-child) {
+      margin-right: 36px;
     }
   }
 }

@@ -1,0 +1,56 @@
+// main
+
+// container
+
+.main__container {
+  position: relative;
+
+  padding: 0;
+  padding-bottom: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 100%;
+    height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media only screen and (min-width: $medium) {
+    padding-bottom: 85px;
+
+    &::before,
+    &::after {
+      height: 17px;
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+
+    &::before,
+    &::after {
+      left: 50px;
+
+      width: calc(100% - 100px);
+      height: 23px;
+
+      background-size: cover;
+    }
+  }
+}

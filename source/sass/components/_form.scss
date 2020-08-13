@@ -7,9 +7,10 @@
 // field
 
 .form__field {
-  border: none;
   margin: 0;
   padding: 0;
+
+  border: none;
 
   &--grey {
     @media only screen and (min-width: $medium) {
@@ -22,13 +23,37 @@
 
 .form__container {
   position: relative;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   outline: 1px solid red;
 
   @media only screen and (min-width: $medium) {
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: 215px;
   }
 
   @media only screen and (min-width: $large) {
+    padding-right: 225px;
+    padding-left: 225px;
+  }
+}
+
+.form__container--extra {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: $medium) {
+    flex-direction: row;
+    align-items: center;
+    padding: 50px;
+  }
+
+  @media only screen and (min-width: $medium) {
+    padding-right: 225px;
     padding-left: 225px;
   }
 }
@@ -101,6 +126,17 @@
 
     opacity: 0.3;
   }
+
+  @media only screen and (min-width: $medium) {
+    width: calc(100% - 215px);
+    margin-bottom: 50px;
+    margin-left: 215px;
+  }
+
+  @media only screen and (min-width: $medium) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 // text
@@ -116,7 +152,9 @@
   color: var(--special-black, #444444);
 
   @media only screen and (min-width: $medium) {
+    order: 1;
     margin: 0;
+    margin-left: auto;
 
     font-size: 17px;
     line-height: 30px;
@@ -127,7 +165,6 @@
 
 .form__button {
   width: 100%;
-  margin-bottom: 30px;
 
   font-style: normal;
   font-weight: bold;
@@ -135,7 +172,6 @@
   line-height: 16px;
 
   @media only screen and (min-width: $medium) {
-    order: -1;
     max-width: 230px;
     margin: 0;
     margin-right: 10px;
