@@ -1,8 +1,8 @@
 // logo
 .logo {
+  display: block;
+  text-align: center;
   padding: 20px;
-  display: grid;
-  place-items: center;
   box-shadow: 0 1px 0 var(--shadow-grey), inset 0 1px 0 var(--shadow-grey);
 
   &[href]:hover,
@@ -16,5 +16,18 @@
 
   @media only screen and (min-width: $medium) {
     box-shadow: none;
+    padding: 0;
+  }
+}
+
+// image
+
+.logo__image {
+  @media only screen and (min-width: $medium) {
+    width: 113px;
+  }
+
+  @media only screen and (min-width: $large) {
+    width: 149px;
   }
 }

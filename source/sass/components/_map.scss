@@ -17,6 +17,15 @@
     background-size: contain;
     transform: translateX(-50%) translateY(-50%);
   }
+
+  @media only screen and (min-width: $medium) {
+    &::after {
+      top: 41%;
+      left: 58%;
+
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
 }
 
 // image

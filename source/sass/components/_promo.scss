@@ -3,15 +3,26 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% -20px;
-  outline: 1px solid red;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 
   @media only screen and (min-width: $medium) {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   @media only screen and (min-width: $large) {
     background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 }
 
@@ -21,12 +32,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 490px;
+  min-height: 485px;
+  padding: 0;
   padding-top: 70px;
 
   @media only screen and (min-width: $medium) {
     min-height: 746px;
     padding-top: 155px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 
@@ -34,7 +48,7 @@
 
 .promo__title {
   margin: 0;
-  margin-bottom: 120px;
+  margin-bottom: auto;
   padding-right: 30px;
   padding-left: 30px;
 
@@ -58,14 +72,16 @@
 // list
 
 .promo__list {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
 
   @media only screen and (min-width: $medium) {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
   }
 }
 
@@ -78,6 +94,8 @@
   line-height: 24px;
 
   @media only screen and (min-width: $medium) {
+    width: 50%;
+
     font-size: 20px;
     line-height: 30px;
   }
@@ -86,14 +104,24 @@
 // link
 
 .promo__link {
+  position: relative;
+
   display: grid;
-  padding: 30px;
+  padding-top: 24px;
+  padding-right: 120px;
+  padding-bottom: 31px;
+  padding-left: 30px;
 
   color: var(--basic-white);
 
   background-color: var(--basic-green, #63d1bb);
 
-  grid-template-columns: min-content auto;
+  grid-template-columns: min-content;
+
+  @media only screen and (min-width: $medium) {
+    padding-bottom: 34px;
+    padding-left: 36px;
+  }
 
   &--dark {
     background-color: var(--basic-green-dark, #56c3b2);
@@ -112,6 +140,11 @@
 // icon
 
 .promo__icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+
+  transform: translateY(-50%);
   opacity: 0.5;
 
   fill: #149080;

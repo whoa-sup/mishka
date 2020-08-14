@@ -1,13 +1,16 @@
 // arrow-button
 
 .arrow-button {
+  display: grid;
   width: 50%;
   margin: 0;
-  padding: 13px;
-  border: none;
+  padding: 12px;
 
   background-color: var(--basic-white);
+  border: none;
   outline: 1px solid var(--shadow-grey);
+
+  place-items: center;
 
   @media only screen and (min-width: $medium) {
     outline: none;
