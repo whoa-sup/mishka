@@ -8,17 +8,21 @@
   </head>
   <body class="page__body">
     <!-- Header -->
-    <header class="header">
+    <header class="header main__header">
 
       <div class="container header__container">
         <!-- logo -->
         <a class="header__logo logo">
-          <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
+          </picture>
         </a>
         <!-- menu -->
-        <nav class="header__menu menu menu--no-js">
+        <nav class="header__menu menu">
           <button class="burger menu__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu__list">
-            <svg class="burger__icon" width="30" height="30">
+            <svg class="burger__icon" width="21" height="20">
               <use class="burger__open" href="img/sprite.svg#icon-menu-open"></use>
               <use class="burger__close" href="img/sprite.svg#icon-menu-close"></use>
             </svg>
@@ -81,11 +85,22 @@
         </div>
       </section>
       <!-- featured -->
-      <section class="main__featured featured">
+      <section class="main__featured featured featured--weekly">
         <div class="container featured__container">
           <h2 class="featured__title">Вязаные корзинки</h2>
           <figure class="featured__wrapper">
-            <img class="featured__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Три вязаных корзинки разных размеров">
+            <picture class="featured__image">
+
+              <!-- webp -->
+              <!-- <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x"> -->
+              <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x"> -->
+              <!-- <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x"> -->
+
+                <!-- jpg -->
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Три вязаных корзинки разных размеров">
+            </picture>
             <figcaption class="featured__caption">
               <p class="featured__description" >Экологически чистая пряжа,
                 ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -213,7 +228,17 @@
             </p>
           </div>
           <div class="contacts__map map">
-            <img class="map__image" src="img/map-mobile@1x.jpg" width="322" height="457" alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">
+            <picture>
+              <!-- webp -->
+              <!-- <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x"> -->
+              <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x"> -->
+              <!-- <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x"> -->
+
+              <!-- jpg -->
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">
+            </picture>
           </div>
           <a class="button contacts__button" href="write-us.html" target="_blank"><span class="button__text">Напишите нам</span></a>
         </div>

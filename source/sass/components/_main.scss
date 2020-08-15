@@ -1,12 +1,55 @@
 // main
 
+// header
+
+.main__header {
+  @media only screen and (min-width: $medium) {
+    margin-bottom: -67px;
+  }
+}
+
+// promo
+
+.main__promo {
+  border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+// featured
+
+.main__featured {
+  position: relative;
+
+  @media only screen and (min-width: $medium) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0;
+      height: 24px;
+      transform: translateY(-50%);
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+      background-position: bottom;
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    &::before {
+      height: 34px;
+      background-size: cover;
+      background-position: unset;
+    }
+  }
+}
+
 // container
 
 .main__container {
   position: relative;
 
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 
   &::before,
   &::after {
@@ -40,7 +83,7 @@
 
   @media only screen and (min-width: $large) {
     padding-right: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 90px;
     padding-left: 50px;
 
     &::before,
@@ -49,8 +92,6 @@
 
       width: calc(100% - 100px);
       height: 23px;
-
-      background-size: cover;
     }
   }
 }

@@ -21,6 +21,10 @@
 
     font-size: 17px;
   }
+
+  @media only screen and (min-width: $large) {
+    margin-bottom: 45px;
+  }
 }
 
 // author
@@ -34,11 +38,17 @@
   font-size: 17px;
   line-height: 24px;
 
+  grid-row-gap: 3px;
+
   @media only screen and (min-width: $medium) {
     margin-bottom: 0;
     padding-right: 185px;
 
     font-size: 18px;
+  }
+
+  @media only screen and (min-width: $large) {
+    font-size: 17px;
   }
 }
 

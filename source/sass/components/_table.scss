@@ -23,6 +23,10 @@
 .table__termin {
   width: 33%;
   margin-right: 10px;
+
+  @media only screen and (min-width: $medium) {
+    width: 30%;
+  }
 }
 
 // definition

@@ -1,29 +1,35 @@
 // reviews
 
 .reviews {
-  outline: 1px solid red;
-
   @media only screen and (min-width: $medium) {
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 }
 
 // container
 
 .reviews__container {
+  padding-top: 28px;
+
   @media only screen and (min-width: $medium) {
     display: grid;
     padding-top: 80px;
+    padding-bottom: 50px;
 
-    grid-template-columns: auto min-content;
     grid-column-gap: 10px;
+    grid-template-columns: auto min-content;
   }
 
   @media only screen and (min-width: $large) {
+    padding-right: 0;
     padding-bottom: 95px;
     padding-left: 175px;
-    padding-right: 0;
   }
 }
 
@@ -31,6 +37,7 @@
 
 .reviews__title {
   margin: 0;
+  margin-bottom: 15px;
 
   font-style: normal;
   font-weight: bold;
@@ -38,7 +45,7 @@
   line-height: 30px;
 
   @media only screen and (min-width: $medium) {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     font-size: 43px;
     line-height: 50px;
@@ -48,6 +55,8 @@
   }
 
   @media only screen and (min-width: $large) {
+    margin-bottom: 38px;
+
     font-size: 53px;
     line-height: 57px;
   }
@@ -80,13 +89,17 @@
 .reviews__controls {
   display: flex;
   min-width: 175px;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
 
   @media only screen and (min-width: $medium) {
     margin: 0;
 
     grid-column: 2/3;
     grid-row: 3/4;
+  }
+
+  @media only screen and (min-width: $large) {
+    margin-bottom: 5px;
   }
 }
 
