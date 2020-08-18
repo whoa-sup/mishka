@@ -8,52 +8,56 @@
   </head>
   <body class="page body">
     <!-- Header -->
-    <header class="header">
+   <header class="header header--dark main__header">
 
-      <div class="container header__container">
-        <!-- logo -->
-        <a class="header__logo logo" href="index.html">
+    <div class="container header__container">
+      <!-- logo -->
+      <a class="header__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
           <img class="logo__image" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин игрушек ручной работы Mishka">
-        </a>
-        <!-- menu -->
-        <nav class="header__menu menu menu--no-js">
-          <button class="burger menu__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu__list">
-            <svg class="burger__icon" width="30" height="30">
-              <use class="burger__open" href="img/sprite.svg#icon-menu-open"></use>
-              <use class="burger__close" href="img/sprite.svg#icon-menu-close"></use>
-            </svg>
-          </button>
-          <ul class="menu__list" id="menu__list">
-            <li class="menu__pages">
-              <a href="catalog.html" class="menu__link"><span class="menu__text">Каталог товаров</span></a>
-              <a href="form.html" class="menu__link"><span class="menu__text">Вязание на заказ</span></a>
-            </li>
-            <li class="menu__actions">
-              <a href="#" class="menu__link menu__link--search" aria-label="Поиск по сайту">
-                <svg class="menu__icon menu__icon--search" width="18" height="18">
-                  <use href="img/sprite.svg#icon-search"></use>
-                </svg>
-                <span class="menu__text">Поиск по сайту</span>
-              </a>
-              <a href="#" class="menu__link menu__link--cart">
-                <svg class="menu__icon" width="21" height="18">
-                  <use href="img/sprite.svg#icon-cart"></use>
-                </svg>
-                <span class="menu__text">Корзина: пока пуста</span>
-              </a>
-            </li>
-            <li class="menu__news">
-              <a href="#" class="menu__link"><span class="menu__text">Новые поступления</span></a>
-              <a href="#" class="menu__link"><span class="menu__text">Распродажа</span></a>
-            </li>
-            <li class="menu__tagline">
-              <p>Бесплатная доставка по России</p>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        </picture>
+      </a>
+      <!-- menu -->
+      <nav class="header__menu menu">
+        <button class="burger menu__button menu__button--open" type="button" aria-expanded="false" aria-controls="menu__list">
+          <svg class="burger__icon" width="21" height="20">
+            <use class="burger__open" href="img/sprite.svg#icon-menu-open"></use>
+            <use class="burger__close" href="img/sprite.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <ul class="menu__list" id="menu__list">
+          <li class="menu__pages">
+            <a href="catalog.html" class="menu__link"><span class="menu__text">Каталог товаров</span></a>
+            <a href="form.html" class="menu__link"><span class="menu__text">Вязание на заказ</span></a>
+          </li>
+          <li class="menu__actions">
+            <a href="#" class="menu__link menu__link--search" aria-label="Поиск по сайту">
+              <svg class="menu__icon menu__icon--search" width="18" height="18">
+                <use href="img/sprite.svg#icon-search"></use>
+              </svg>
+              <span class="menu__text">Поиск по сайту</span>
+            </a>
+            <a href="#" class="menu__link menu__link--cart">
+              <svg class="menu__icon" width="21" height="18">
+                <use href="img/sprite.svg#icon-cart"></use>
+              </svg>
+              <span class="menu__text">Корзина: пока пуста</span>
+            </a>
+          </li>
+          <li class="menu__news">
+            <a href="#" class="menu__link"><span class="menu__text">Новые поступления</span></a>
+            <a href="#" class="menu__link"><span class="menu__text">Распродажа</span></a>
+          </li>
+          <li class="menu__tagline">
+            <p>Бесплатная доставка по России</p>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-    </header>
+  </header>
     <!-- Main -->
     <main class="main">
       <!-- intro -->
@@ -71,12 +75,12 @@
           <fieldset class="form__field">
             <div class="container form__container">
               <legend class="form__title">Тип</legend>
-              <label class="form__item radio">
+              <label class="form__radio radio">
                 <input class="radio__input" type="radio" name="type" checked>
                 <span class="radio__icon"></span>
                 <span class="radio__label">Аксессуар для интерьера</span>
               </label>
-              <label class="form__item radio">
+              <label class="form__radio radio">
                 <input class="radio__input" type="radio" name="type">
                 <span class="radio__icon"></span>
                 <span class="radio__label">Детская игрушка</span>
@@ -84,45 +88,45 @@
             </div>
           </fieldset>
           <fieldset class="form__field form__field--grey">
-            <div class="container form__container">
+            <div class="container form__container form__container--color">
               <legend class="form__title">Цвет</legend>
               <ul class="form__list">
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" name="type" checked>
                     <span class="checkbox__icon"></span>
                     Белый
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" name="type" checked>
                     <span class="checkbox__icon"></span>
                     Серый
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" name="type">
                     <span class="checkbox__icon"></span>
                     «Тиффани»
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" name="type">
                     <span class="checkbox__icon"></span>
                     Черный
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" name="type">
                     <span class="checkbox__icon"></span>
                     Розовый
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="checkbox">
                     <input class="checkbox__input" type="checkbox" name="type">
                     <span class="checkbox__icon"></span>
@@ -133,26 +137,26 @@
             </div>
           </fieldset>
           <fieldset class="form__field">
-            <div class="container form__container">
+            <div class="container form__container form__container--user">
               <legend class="form__title">Фио</legend>
-              <label class="form__item textfield" for="name">
+              <label class="form__textfield textfield" for="name">
                 Имя:
                 <input class="textfield__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
               </label>
-              <label class="form__item textfield" for="surname">
+              <label class="form__textfield textfield" for="surname">
                 Фамилия:
                 <input class="textfield__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
               </label>
-              <label class="form__item textfield" for="patronymic">
+              <label class="form__textfield textfield" for="patronymic">
                 Отчество:
                 <input class="textfield__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
               </label>
             </div>
           </fieldset>
           <fieldset class="form__field form__field--grey">
-            <div class="container form__container">
+            <div class="container form__container form__container--tel">
               <legend class="form__title">Тел</legend>
-              <label class="form__item contact" for="tel">
+              <label class="form__contact contact" for="tel">
                 <span class="visually-hidden">Ваш телефон</span>
                 <input class="contact__input" type="tel" name="tel" id="tel"  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 <svg class="contact__icon" width="25" height="24">
@@ -162,9 +166,9 @@
             </div>
           </fieldset>
           <fieldset class="form__field form__field--grey">
-            <div class="container form__container">
+            <div class="container form__container form__container--email">
               <legend class="form__title">E-mail</legend>
-              <label class="form__item contact" for="email">
+              <label class="form__contact contact" for="email">
                 <span class="visually-hidden">Ваш email</span>
                 <input class="contact__input" type="email" name="email" id="email"  placeholder="Ваш Email*" required>
                 <svg class="contact__icon" width="32" height="21">

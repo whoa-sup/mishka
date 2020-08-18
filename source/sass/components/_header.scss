@@ -1,5 +1,10 @@
 .header {
   background-color: var(--basic-white, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff 0 88px, rgba($color: #000000, $alpha: 0.1) 88px 89px, #f9f9f9 89px 100%);
+
+  &--dark {
+    background-image: linear-gradient(to bottom, #ffffff 0 88px, rgba($color: #000000, $alpha: 0.1) 88px 89px, #f1f1f1 89px 100%);
+  }
 }
 
 // container

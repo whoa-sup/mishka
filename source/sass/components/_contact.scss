@@ -9,6 +9,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
+
+  @media only screen and (min-width: $medium) {
+    font-size: 19px;
+  }
 }
 
 // input
@@ -17,6 +21,10 @@
   width: 100%;
   padding: 15px 0;
   padding-right: 38px;
+
+  @media only screen and (min-width: $medium) {
+    padding-left: 16px;
+  }
 
   background-color: inherit;
   border: none;
@@ -38,6 +46,10 @@
     opacity: 1;
 
     fill: #62d1ba;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 
