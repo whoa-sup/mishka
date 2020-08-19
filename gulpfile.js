@@ -2,12 +2,14 @@ const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
+const csso = require("gulp-csso");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
 const svgstore = require("gulp-svgstore");
-const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const rename = require("gulp-rename");
+const sync = require("browser-sync").create();
 
 // Styles
 
@@ -19,12 +21,37 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+// images
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg, png, svg}")
+  .pipe(imagemin([
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 3}),
+    imagemin.svgo()
+  ]))
+}
+
+exports.images = images;
+
+// webp
+
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{jpg, png}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("source/img"))
+}
+
+exports.createWebp = createWebp;
 
 // sprite
 
