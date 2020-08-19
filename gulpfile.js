@@ -10,6 +10,7 @@ const svgstore = require("gulp-svgstore");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const rename = require("gulp-rename");
+const del = require("del");
 const sync = require("browser-sync").create();
 
 // styles
@@ -39,9 +40,6 @@ const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({
       collapseWhitespace: true
-    }))
-    .pipe(rename({
-      suffix: ".min"
     }))
     .pipe(gulp.dest("build"))
 }
@@ -79,7 +77,7 @@ const sprite = () => {
     inlineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img/"));
+  .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -113,7 +111,7 @@ const clean = () => {
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -128,7 +126,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
 
 exports.default = gulp.series(
@@ -137,12 +135,14 @@ exports.default = gulp.series(
 
 // build
 
-const build = () => gulp.series(
-  "clean",
-  "copy",
-  "styles",
-  "sprite",
-  "html"
- );
+const build = (done) => {
+  gulp.series(
+    clean,
+    copy,
+    html,
+    styles,
+    sprite
+  )(done)
+};
 
- exports.build = build;
+exports.build = build;
