@@ -30,6 +30,15 @@
   @media only screen and (max-width: $smallOnly) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    fill: var(--special-green, #46c1ae);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 // socials
