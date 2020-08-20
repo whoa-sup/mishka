@@ -17,3 +17,33 @@ menuButton.addEventListener("click", () => {
 
 });
 
+
+// modal
+
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const orderButton = document.querySelector(".order-button");
+const sizeButton = document.querySelector("#small");
+const closeButton = document.querySelector(".modal__button");
+
+orderButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.classList.add("modal--show");
+  overlay.classList.add("overlay--show");
+  sizeButton.focus();
+});
+
+overlay.addEventListener("click", () => {
+  modal.classList.remove("modal--show");
+  overlay.classList.remove("overlay--show");
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.keyCode === 27) {
+    if (modal.classList.contains("modal--show")) {
+      e.preventDefault();
+      modal.classList.remove("modal--show");
+      overlay.classList.remove("overlay--show");
+    }
+  }
+});
