@@ -39,6 +39,10 @@
     grid-template-areas: "pages . actions" "news . tagline";
     grid-template-columns: 1fr 150px 1fr;
   }
+
+  &--close {
+    display: none;
+  }
 }
 
 // pages
