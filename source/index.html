@@ -226,6 +226,7 @@
             </p>
           </div>
           <div class="contacts__map map">
+            <div class="map__api"></div>
             <picture>
               <!-- webp -->
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
@@ -329,7 +330,12 @@
         <button class="modal__button" type="submit">Добавить</button>
       </form>
     </section>
-    <script src="js/script.js" async></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZZ-Se67wK_ap4AKsJvcL1LE25EVTS8s"></script>
+    <!-- Google Maps API -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSZZ-Se67wK_ap4AKsJvcL1LE25EVTS8s&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
   </body>
 </html>

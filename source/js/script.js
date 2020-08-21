@@ -47,3 +47,23 @@ window.addEventListener("keydown", (e) => {
     }
   }
 });
+
+// map
+
+const coordinates = { lat: 59.938635, lng: 30.323118 };
+const markerImage = "../img/icon-map-pin.svg";
+
+function initMap() {
+
+  let map = new google.maps.Map(document.querySelector(".map__api"), {
+    center: coordinates,
+    zoom: 17
+  });
+
+  let marker = new google.maps.Marker({
+    position: coordinates,
+    map: map,
+    icon: markerImage,
+    animation: google.maps.Animation.DROP
+  });
+}
