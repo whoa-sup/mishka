@@ -1,26 +1,51 @@
 // intro
 
 .intro {
+  position: relative;
+
   color: var(--basic-black);
 
   background-color: var(--special-grey);
+
+  @media only screen and (min-width: $medium) {
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+
+      width: 100%;
+      height: 24px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: bottom;
+      background-size: contain;
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    &::before {
+      height: 34px;
+    }
+  }
 }
+
 
 // container
 
 .intro__container {
-  padding-top: 75px;
+  padding-top: 70px;
   padding-bottom: 75px;
 
   text-align: center;
 
   @media only screen and (min-width: $medium) {
-    padding-top: 100px;
-    padding-bottom: 75px;
+    padding-top: 35px;
+    padding-bottom: 85px;
   }
 
   @media only screen and (min-width: $large) {
-    padding-bottom: 95px;
+    padding-bottom: 115px;
   }
 }
 

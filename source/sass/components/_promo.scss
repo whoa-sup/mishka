@@ -10,7 +10,7 @@
 
   @media only screen and (min-width: $medium) {
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: center center;
+    background-position: 50% -70px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
@@ -37,8 +37,8 @@
   padding-top: 70px;
 
   @media only screen and (min-width: $medium) {
-    min-height: 746px;
-    padding-top: 155px;
+    min-height: 681px;
+    padding-top: 90px;
     padding-right: 50px;
     padding-left: 50px;
   }
@@ -82,6 +82,7 @@
 
   @media only screen and (min-width: $medium) {
     flex-direction: row;
+    align-items: flex-end;
   }
 }
 
@@ -121,6 +122,11 @@
   @media only screen and (min-width: $medium) {
     padding-bottom: 34px;
     padding-left: 36px;
+
+    &:hover,
+    &:focus {
+      padding-bottom: 39px;
+    }
   }
 
   &--dark {

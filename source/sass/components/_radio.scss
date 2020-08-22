@@ -24,10 +24,18 @@
 // input
 
 .radio__input {
-  $innerSmall: 16px;
-  $radioSmall: 39px;
+  flex-shrink: 0;
+  margin-right: 21px;
+
+  border: 2px solid var(--special-black, #000000);
+  border-radius: 50%;
+
+  appearance: none;
+
   $innerBig: 21px;
+  $innerSmall: 16px;
   $radioBig: 52px;
+  $radioSmall: 39px;
 
   @include size($radioSmall);
 
@@ -35,13 +43,9 @@
     @include size($radioBig);
   }
 
-  flex-shrink: 0;
-  margin-right: 23px;
-
-  border: 2px solid var(--special-black, #000000);
-  border-radius: 50%;
-
-  appearance: none;
+  @media only screen and (min-width: $medium) {
+    margin-right: 28px;
+  }
 
   &:hover,
   &:focus {
@@ -66,10 +70,15 @@
     @include size($innerSmall);
 
     @media only screen and (min-width: $medium) {
-      @include size($innerBig);
       top: $radioBig / 2;
       left: $radioBig / 2;
+
+      @include size($innerBig);
     }
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 

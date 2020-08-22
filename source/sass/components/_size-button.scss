@@ -1,0 +1,41 @@
+// size-button
+
+.size-button {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--special-black, #444444);
+}
+
+// input
+
+.size-button__input {
+  appearance: none;
+  position: absolute;
+}
+
+.size-button__input:checked + .size-button__label,
+.size-button__input:active + .size-button__label {
+  border-color: var(--basic-green, #63d1bb);
+}
+
+.size-button__input:disabled + .size-button__label {
+  opacity: 0.3;
+}
+
+// label
+
+.size-button__label {
+  display: block;
+  padding: 17px;
+  border: 2px solid rgba($color: #444444, $alpha: 0.1);
+
+  &:hover,
+  &:focus {
+    border-color: rgba($color: #444444, $alpha: 0.3);
+  }
+}

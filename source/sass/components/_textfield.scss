@@ -9,9 +9,9 @@
   font-size: 17px;
   line-height: 18px;
 
-  grid-row-gap: 10px;
-
   @media only screen and (min-width: $medium) {
+    font-size: 19px;
+
     grid-column-gap: 25px;
     grid-template-columns: min-content auto;
   }
@@ -35,4 +35,20 @@
   &:focus {
     border-color: #62d1ba;
   }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @media only screen and (min-width: $medium) {
+    padding: 14px 16px;
+  }
+
+
+  @media only screen and (min-width: $large) {
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
 }

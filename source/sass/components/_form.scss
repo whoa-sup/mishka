@@ -1,9 +1,3 @@
-// form
-
-.form {
-  outline: 1px solid blue;
-}
-
 // field
 
 .form__field {
@@ -24,15 +18,13 @@
 .form__container {
   position: relative;
 
-  padding-top: 30px;
+  padding-top: 42px;
   padding-bottom: 30px;
-
-  outline: 1px solid red;
 
   @media only screen and (min-width: $medium) {
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 215px;
+    padding-left: 217px;
   }
 
   @media only screen and (min-width: $large) {
@@ -41,10 +33,18 @@
   }
 }
 
+.form__container--color {
+  @media only screen and (min-width: $large) {
+    padding-right: 160px;
+  }
+}
+
 .form__container--extra {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-top: 39px;
+  padding-bottom: 56px;
 
   @media only screen and (min-width: $medium) {
     flex-direction: row;
@@ -52,9 +52,47 @@
     padding: 50px;
   }
 
-  @media only screen and (min-width: $medium) {
+  @media only screen and (min-width: $large) {
     padding-right: 225px;
     padding-left: 225px;
+  }
+}
+
+.form__container--user {
+  padding-top: 48px;
+  padding-bottom: 36px;
+
+  @media only screen and (min-width: $medium) {
+    padding-top: 51px;
+    padding-bottom: 49px;
+  }
+
+  @media only screen and (min-width: $large) {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+}
+
+.form__container--tel,
+.form__container--email {
+  padding-top: 20px;
+  padding-bottom: 36px;
+}
+
+.form__container--tel {
+  @media only screen and (min-width: $medium) {
+    padding-top: 50px;
+    padding-bottom: 2px;
+  }
+}
+
+.form__container--email {
+  @media only screen and (min-width: $medium) {
+    padding-bottom: 50px;
+
+    & .form__title {
+      top: 40px;
+    }
   }
 }
 
@@ -62,7 +100,10 @@
 
 .form__title {
   position: absolute;
-  top: 10px;
+  top: 0;
+
+  display: grid;
+  width: calc(100% - 60px);
 
   font-style: normal;
   font-weight: bold;
@@ -71,9 +112,33 @@
   color: var(--basic-green);
   text-transform: uppercase;
 
+  grid-column-gap: 25px;
+  grid-template-columns: max-content 1fr;
+
+  &::after {
+    content: "";
+
+    display: block;
+    align-self: center;
+    height: 1px;
+
+    background-color: #62d1ba;
+  }
+
   @media only screen and (min-width: $medium) {
     top: 66px;
     left: 50px;
+
+    display: block;
+    width: auto;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $large) {
+    left: 112px;
   }
 }
 
@@ -87,8 +152,8 @@
   list-style: none;
 
   @media only screen and (min-width: $medium) {
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -97,11 +162,45 @@
   }
 }
 
-// item
+// radio
 
-.form__item {
+.form__radio {
   &:not(:last-child) {
     margin-bottom: 5px;
+  }
+
+  @media only screen and (min-width: $medium) {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+// checkbox
+
+.form__checkbox {
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  @media only screen and (min-width: $medium) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// textfield
+
+.form__textfield {
+  &:not(:last-child) {
+    margin-bottom: 22px;
+  }
+
+  @media only screen and (min-width: $medium) {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
   }
 }
 
@@ -109,7 +208,7 @@
 
 .form__textarea {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   padding: 15px;
 
   font-style: normal;
@@ -127,14 +226,20 @@
     opacity: 0.3;
   }
 
-  @media only screen and (min-width: $medium) {
-    width: calc(100% - 215px);
-    margin-bottom: 50px;
-    margin-left: 215px;
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
   }
 
   @media only screen and (min-width: $medium) {
-    width: 100%;
+    margin-bottom: 57px;
+    margin-left: 167px;
+
+    font-size: 19px;
+  }
+
+  @media only screen and (min-width: $large) {
+    margin-bottom: 55px;
     margin-left: 0;
   }
 }
@@ -143,7 +248,7 @@
 
 .form__text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   font-style: normal;
   font-weight: normal;

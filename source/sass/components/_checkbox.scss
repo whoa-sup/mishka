@@ -30,10 +30,11 @@
 
   appearance: none;
 
-  @include size(40px, 39px);
+  @include size(38px, 39px);
 
   @media only screen and (min-width: $medium) {
     @include size(54px, 52px);
+    margin-right: 27px;
   }
 
   &:hover,
@@ -42,8 +43,7 @@
   }
 
   &:active {
-    border-color: var(--special-black);
-    opacity: 0.3;
+    border-color: rgba($color: #444444, $alpha: 0.1);
   }
 
   &:checked {
@@ -51,5 +51,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 70%;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }

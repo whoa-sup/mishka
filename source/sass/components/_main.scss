@@ -1,19 +1,5 @@
 // main
 
-// header
-
-.main__header {
-  @media only screen and (min-width: $medium) {
-    margin-bottom: -67px;
-  }
-}
-
-// promo
-
-.main__promo {
-  border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
-}
-
 // featured
 
 .main__featured {
