@@ -76,4 +76,3 @@ ymaps.ready(() => {
 
   map.geoObjects.add(mishkaPlacemark);
 });
-
