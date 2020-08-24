@@ -1,17 +1,22 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
+const rename = require("gulp-rename");
+const del = require("del");
+const sync = require("browser-sync").create();
+// html
 const htmlmin = require("gulp-htmlmin");
+// css
 const sass = require("gulp-sass");
 const csso = require("gulp-csso");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+// js
+const terser = require("gulp-terser");
+// images
 const svgstore = require("gulp-svgstore");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const rename = require("gulp-rename");
-const del = require("del");
-const sync = require("browser-sync").create();
 
 // styles
 
@@ -50,6 +55,10 @@ exports.html = html;
 
 const js = () => {
   return gulp.src("source/js/**/*.js")
+    .pipe(terser())
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest("build/js"))
 }
 
@@ -104,7 +113,7 @@ const copy = () => {
  .pipe(gulp.dest("build"));
 };
 
- exports.copy = copy;
+exports.copy = copy;
 
 // clean
 
@@ -112,7 +121,7 @@ const clean = () => {
   return del("build");
 };
 
- exports.clean = clean;
+exports.clean = clean;
 
 // server
 
