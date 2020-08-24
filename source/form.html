@@ -73,8 +73,8 @@
         </div>
         <form class="order__form form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="form__field">
+            <legend class="form__title">Тип</legend>
             <div class="container form__container">
-              <legend class="form__title">Тип</legend>
               <label class="form__radio radio">
                 <input class="radio__input" type="radio" name="type" checked>
                 <span class="radio__icon"></span>
@@ -88,8 +88,8 @@
             </div>
           </fieldset>
           <fieldset class="form__field form__field--grey">
+            <legend class="form__title">Цвет</legend>
             <div class="container form__container form__container--color">
-              <legend class="form__title">Цвет</legend>
               <ul class="form__list">
                 <li class="form__checkbox">
                   <label class="checkbox">
@@ -137,8 +137,8 @@
             </div>
           </fieldset>
           <fieldset class="form__field">
+            <legend class="form__title">Фио</legend>
             <div class="container form__container form__container--user">
-              <legend class="form__title">Фио</legend>
               <label class="form__textfield textfield" for="name">
                 Имя:
                 <input class="textfield__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -154,11 +154,11 @@
             </div>
           </fieldset>
           <fieldset class="form__field form__field--grey">
+            <legend class="form__title">Тел</legend>
             <div class="container form__container form__container--tel">
-              <legend class="form__title">Тел</legend>
-              <label class="form__contact contact" for="tel">
+              <label class="form__contact contact">
                 <span class="visually-hidden">Ваш телефон</span>
-                <input class="contact__input" type="tel" name="tel" id="tel"  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <input class="contact__input" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
                 <svg class="contact__icon" width="25" height="24">
                   <use href="img/sprite.svg#icon-phone"></use>
                 </svg>
@@ -166,11 +166,11 @@
             </div>
           </fieldset>
           <fieldset class="form__field form__field--grey">
+            <legend class="form__title form__title--email">E-mail</legend>
             <div class="container form__container form__container--email">
-              <legend class="form__title">E-mail</legend>
-              <label class="form__contact contact" for="email">
+              <label class="form__contact contact">
                 <span class="visually-hidden">Ваш email</span>
-                <input class="contact__input" type="email" name="email" id="email"  placeholder="Ваш Email*" required>
+                <input class="contact__input" type="email" name="email" placeholder="Ваш Email*" required>
                 <svg class="contact__icon" width="32" height="32">
                   <use href="img/sprite.svg#icon-mail"></use>
                 </svg>
@@ -178,8 +178,8 @@
             </div>
           </fieldset>
           <fieldset class="form__field">
+            <legend class="form__title">Доп</legend>
             <div class="container form__container form__container--extra">
-              <legend class="form__title">Доп</legend>
               <textarea class="form__textarea" name="wishes" id="wishes" cols="30" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               <p class="form__text">*Поля обязательны для заполнения</p>
               <button class="form__button button" type="submit">Отправить заказ</button>
