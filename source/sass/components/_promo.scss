@@ -120,11 +120,13 @@
   grid-template-columns: min-content;
 
   @media only screen and (min-width: $medium) {
+    margin-top: 5px;
     padding-bottom: 34px;
     padding-left: 36px;
 
     &:hover,
     &:focus {
+      margin-top: 0;
       padding-bottom: 39px;
     }
   }
