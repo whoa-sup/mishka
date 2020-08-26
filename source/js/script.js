@@ -51,7 +51,7 @@ window.addEventListener("keydown", (e) => {
 // map
 
 const coordinates = [59.938635, 30.323118 ];
-const markerImage = "../img/icon-map-pin.svg";
+const markerImage = "img/icon-map-pin.svg";
 
 ymaps.ready(() => {
   let map = new ymaps.Map(document.querySelector(".map__api"), {
