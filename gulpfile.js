@@ -17,6 +17,7 @@ const terser = require("gulp-terser");
 const svgstore = require("gulp-svgstore");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const { parallel } = require("gulp");
 
 // styles
 
@@ -123,9 +124,9 @@ const clean = () => {
 
 exports.clean = clean;
 
-// server
+// watcher
 
-const server = (done) => {
+const watcher = () => {
   sync.init({
     server: {
       baseDir: "build"
@@ -134,22 +135,10 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
-  done();
-}
-
-exports.server = server;
-
-// watcher
-
-const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/js/**/*.js", gulp.series("js")).on("change", sync.reload);
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
 }
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 // build
 
@@ -163,7 +152,13 @@ const build = (done) => {
     images,
     sprite,
     createWebp
-  )(done)
-};
+    )(done)
+  };
 
-exports.build = build;
+  exports.build = build;
+
+  // default
+
+  exports.default = gulp.series(
+    build, watcher
+  );
