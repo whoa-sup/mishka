@@ -15,13 +15,15 @@
       transform: translateY(-50%);
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: auto 100%;
+      background-size: 770px 100%;
+      background-position: center;
     }
   }
 
   @media only screen and (min-width: $large) {
     &::before {
       height: 34px;
+      background-size: 1250px 100%;
     }
   }
 }
@@ -44,7 +46,8 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: 320px 100%;
   }
 
   &::before {
@@ -61,6 +64,7 @@
     &::before,
     &::after {
       height: 17px;
+      background-size: 770px 100%;
     }
   }
 
@@ -75,6 +79,7 @@
 
       width: calc(100% - 100px);
       height: 23px;
+      background-size: 1050px 100%;
     }
   }
 }
