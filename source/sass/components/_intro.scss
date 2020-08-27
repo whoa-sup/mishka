@@ -18,13 +18,15 @@
 
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: auto 100%;
+      background-size: 770px 100%;
+      background-position: center;
     }
   }
 
   @media only screen and (min-width: $large) {
     &::before {
       height: 34px;
+      background-size: 1250px 100%;
     }
   }
 }
