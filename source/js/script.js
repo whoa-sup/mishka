@@ -50,20 +50,29 @@ window.addEventListener("keydown", (e) => {
 
 // map
 
-const coordinates = { lat: 59.938635, lng: 30.323118 };
-const markerImage = "../img/icon-map-pin.svg";
+const coordinates = [59.938635, 30.323118 ];
+const markerImage = "img/icon-map-pin.svg";
 
-function initMap() {
-
-  let map = new google.maps.Map(document.querySelector(".map__api"), {
+ymaps.ready(() => {
+  let map = new ymaps.Map(document.querySelector(".map__api"), {
     center: coordinates,
-    zoom: 17
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 16
   });
 
-  let marker = new google.maps.Marker({
-    position: coordinates,
-    map: map,
-    icon: markerImage,
-    animation: google.maps.Animation.DROP
-  });
-}
+  let mishkaPlacemark = new ymaps.Placemark(
+    map.getCenter(),
+    {
+      hintContent: "Магазин Mishka"
+    },
+    {
+      iconLayout: "default#imageWithContent",
+      iconImageHref: markerImage,
+      iconImageSize: [67, 100],
+      iconImageOffset: [-33, -100]
+    }
+  );
+
+  map.geoObjects.add(mishkaPlacemark);
+});

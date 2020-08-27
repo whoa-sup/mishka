@@ -1,6 +1,8 @@
 // field
 
 .form__field {
+  position: relative;
+
   margin: 0;
   padding: 0;
 
@@ -89,10 +91,6 @@
 .form__container--email {
   @media only screen and (min-width: $medium) {
     padding-bottom: 50px;
-
-    & .form__title {
-      top: 40px;
-    }
   }
 }
 
@@ -101,6 +99,7 @@
 .form__title {
   position: absolute;
   top: 0;
+  left: 30px;
 
   display: grid;
   width: calc(100% - 60px);
@@ -132,13 +131,19 @@
     display: block;
     width: auto;
 
+    &--email {
+      top: 40px;
+    }
+
     &::after {
       display: none;
     }
   }
 
   @media only screen and (min-width: $large) {
-    left: 112px;
+    left: 50%;
+
+    transform: translateX(-463px);
   }
 }
 

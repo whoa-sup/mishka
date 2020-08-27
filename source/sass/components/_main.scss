@@ -15,16 +15,13 @@
       transform: translateY(-50%);
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: contain;
-      background-position: bottom;
+      background-size: auto 100%;
     }
   }
 
   @media only screen and (min-width: $large) {
     &::before {
       height: 34px;
-      background-size: cover;
-      background-position: unset;
     }
   }
 }
@@ -47,7 +44,7 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-size: contain;
+    background-size: auto 100%;
   }
 
   &::before {
