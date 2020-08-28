@@ -43,11 +43,4 @@
   @media only screen and (min-width: $medium) {
     padding: 14px 16px;
   }
-
-
-  @media only screen and (min-width: $large) {
-    &::placeholder {
-      opacity: 1;
-    }
-  }
 }
